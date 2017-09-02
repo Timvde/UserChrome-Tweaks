@@ -1,0 +1,19 @@
+/* 
+ * Make the toolbar extra-compact (similar to v56 with CTR)
+ *
+ * Contributor(s): Alex Vallat
+ */
+ 
+#urlbar,
+.searchbar-textbox {
+  font-size: unset !important;
+  min-height: 24px !important;
+}
+
+#identity-box {
+  max-height: 22px;
+}
+
+#main-window #nav-bar .toolbarbutton-1 {
+  padding: 0px !important;
+}
