@@ -1,0 +1,10 @@
+/*
+ * Makes urlbar and many other things sharper on the edges
+ *
+ * Contributor(s): DrPugsley
+ */
+
+:root {
+  --toolbarbutton-border-radius: 0px !important;
+}
+
