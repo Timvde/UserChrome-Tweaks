@@ -1,0 +1,50 @@
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This style will move your tabs to the bottom, and improve color
+ * indicators for the containers feature. Currently tested on MacOS
+ * Sierra and Linux on Nightly */
+
+/*Tabs On Bottom*/
+#TabsToolbar {
+  -moz-box-ordinal-group: 2;
+}
+#nav-bar{
+  border-top-width: 0px !important;
+  padding: 0px 5px 0px 75px !important; /*The 75px is a fix for MacOS to make room for the window controls*/
+}
+
+/*Remove extra tab bar space*/
+#TabsToolbar {
+  padding-inline-start: 0px !important;
+  margin-bottom: none !important;
+}
+#titlebar-placeholder-on-TabsToolbar-for-captions-buttons {
+  display: none;
+}
+.box-inherit .scrollbox-innerbox {
+  margin-right: 0 !important;
+}
+#TabsToolbar .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+  padding-inline-start: 0px !important;
+  padding-inline-end: 0px !important;
+}
+
+/*position window controls.  Only for MacOS, comment out for Linux/Windows*/
+#titlebar-buttonbox-container {
+  margin-left: 5px !important;
+  margin-top: 10.5px !important;
+}
+
+/*tab line match container color, show on hover on background tabs*/
+.tabbrowser-tab[usercontextid] .tab-line{
+    background-color:var(--identity-tab-color)!important;
+}
+.tabbrowser.tab[usercontextid] .tab-line {
+  background:var(--identity-tab-color) !important;
+}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: none !important;
+}
