@@ -1,0 +1,13 @@
+/*
+ * Only show close buttons on background tabs when hovering with the mouse
+ *
+ * Contributor(s): Timvde
+ */
+
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}
