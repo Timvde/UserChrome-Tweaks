@@ -1,0 +1,9 @@
+/*
+ * Remove "Send Page to Device" from context menu.
+ *
+ * Contributor(s): PilzAdam
+ */
+
+#context-sendpagetodevice, #context-sep-sendpagetodevice {
+  display: none !important;
+}
