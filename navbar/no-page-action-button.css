@@ -1,0 +1,13 @@
+/*
+* Removes the "PageAction Button", the 3-dot button near the right of the urlbar which gives you options such as:
+* "Bookmark this page", "Save page to pocket", etc.
+*/
+
+#pageActionButton {
+  display: none !important;
+}
+
+#page-action-buttons {
+  display: none !important;
+}
+
