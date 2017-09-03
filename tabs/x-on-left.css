@@ -1,0 +1,16 @@
+/*
+ * Moves the tab close button to the left of the tab
+ *
+ * Contributor(s): April93
+ */
+#TabsToolbar .tab-close-button { 
+  -moz-box-ordinal-group: 0 !important; 
+  margin-left: -6px !important;
+  border-radius: 2px !important;
+  transition: opacity 200ms !important;
+}
+
+#TabsToolbar .tab-icon-image:not([pinned])
+{
+  margin-left: 2px;
+}
