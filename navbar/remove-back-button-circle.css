@@ -1,0 +1,26 @@
+/*
+ * Remove circle, background and padding from back button
+ *
+ * Contributor(s): Skrity
+ */
+
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+  background-color: unset !important;
+  border: unset !important;
+  padding: var(--toolbarbutton-inner-padding) !important;
+  border-radius: var(--toolbarbutton-border-radius) !important;
+}
+
+/* Hover and Active states to mimic other buttons */
+:root:not([uidensity="compact"]) #back-button:hover:not([disabled]) > .toolbarbutton-icon {
+  background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+:root:not([uidensity="compact"]) #back-button:active:not([disabled]) > .toolbarbutton-icon {
+  background-color: var(--toolbarbutton-active-background) !important;
+}
+
+/* Remove pre-padding */
+:root:not([uidensity="compact"]) #back-button {
+  padding-inline-start: 3px !important;
+}
