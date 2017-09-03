@@ -1,19 +1,21 @@
-/* 
+/*
  * Make the toolbar extra-compact (similar to v56 with CTR)
+ *
+ * Applies to Compact density
  *
  * Contributor(s): Alex Vallat
  */
- 
-#urlbar,
-.searchbar-textbox {
+
+:root[uidensity=compact] #urlbar,
+:root[uidensity=compact] .searchbar-textbox {
   font-size: unset !important;
   min-height: 24px !important;
 }
 
-#identity-box {
+:root[uidensity=compact] #identity-box {
   max-height: 22px;
 }
 
-#main-window #nav-bar .toolbarbutton-1 {
+:root[uidensity=compact] #nav-bar .toolbarbutton-1 {
   padding: 0px !important;
 }
