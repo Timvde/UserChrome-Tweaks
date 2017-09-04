@@ -1,0 +1,31 @@
+/*
+ * Sliding Bookmarks Bar
+ * Makes the bookmarks bar slide down on hover or when menubar is enabled.
+ *
+ * Contributor(s): zvuc (https://userstyles.org/styles/57368/firefox-sliding-bookmarks-bar-windows)
+ * License: CC BY-NC-SA (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ */
+
+#nav-bar ~ #PersonalToolbar:not([customizing]) {
+  position: fixed !important;
+  padding: 3px 2px 2px !important;
+  height: auto !important;
+  border-top: 0px solid transparent!important;
+  border-right: 1px solid transparent !important;
+  border-bottom: 1px solid rgba(0,0,0,0.3) !important;
+  border-left: 1px solid transparent !important;
+  box-shadow: 0 0px 2px rgba(0,0,0,0);
+  width: 100%;
+  transform: translateY(-100%);
+  transition: transform 0.2s !important;
+}
+
+#navigator-toolbox:hover >
+#nav-bar ~ #PersonalToolbar:not([customizing]) {
+  transform: translateY(0);
+}
+
+#toolbar-menubar:not([inactive="true"]) ~
+#nav-bar ~ #PersonalToolbar:not([customizing]) {
+  transform: translateY(0);
+}
