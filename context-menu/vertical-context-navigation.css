@@ -1,0 +1,80 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* This is hacky solution but the context menu structure makes it hard to position things correctly */
+
+/* Set the navigation container vertical and disable the containers pointer events.*/
+#contentAreaContextMenu #context-navigation:not([hidden]){ 
+  -moz-box-orient: vertical !important;
+  position:absolute !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+/* Enable individual buttons' pointer-events which would be disabled through cascade*/
+#contentAreaContextMenu #context-navigation:not([hidden]) menuitem{
+  pointer-events: auto !important;
+  position:absolute !important;
+  margin-left:0px;
+}
+
+/* #contentAreaContextMenu #context-navigation:not([hidden])~* should work too :p */
+#contentAreaContextMenu #context-navigation:not([hidden])~menuitem,
+#contentAreaContextMenu #context-navigation:not([hidden])~menu,
+#contentAreaContextMenu #context-navigation:not([hidden])~menuseparator{
+  margin-left: 30px;
+}
+
+/* Not totally sure how necessary this is, but just to be safe */
+#contentAreaContextMenu menuitem:not([class="menuitem-iconic"]){
+  min-height:24px !important;
+  height:24px;
+}
+
+/* Get rid of now unimportant separator */
+#context-sep-navigation{
+  display:none;
+}
+
+/* Move text leftwards */
+#contentAreaContextMenu #context-navigation:not([hidden])~menuitem .menu-text,
+#contentAreaContextMenu #context-navigation:not([hidden])~menu .menu-text{
+  margin-left: -20px !important;
+}
+
+/* Move menuitems up. Will fail if save-page item is for some reason not the topmoset*/
+#contentAreaContextMenu #context-navigation:not([hidden])~#context-savepage,
+#contentAreaContextMenu #context-navigation:not([hidden])~#context-sep-navigation+menuitem[generateditemid]{
+  margin-top: -128px !important;
+}
+
+/* There can be generated menuitems such as Edit-page that appears on MDN so need to handle them */
+#contentAreaContextMenu #context-navigation:not([hidden])~menuitem[generateditemid]~#context-savepage{
+  margin-top: unset !important;
+}
+
+/* It's hard to explain why this is necessary, it has to do with how context menu height is calculated */
+#contentAreaContextMenu .scrollbox-innerbox::after{ 
+  content: "";
+  position: absolute;
+  margin-bottom:106px;
+  visibility: hidden;
+}
+
+/* At this point there's a rather big bottom margin which then causes overflow buttons to appear */
+#contentAreaContextMenu autorepeatbutton{
+  display:none;
+}
+
+/* Get rid of the margin when navigation buttons are disabled. autorepeatbutton[collapsed] is only way to track such case*/
+#contentAreaContextMenu autorepeatbutton[collapsed]~.arrowscrollbox-scrollbox .scrollbox-innerbox::after{
+  display:none;
+}
+
+/* Also disable the margin on sub-menus unconditionally*/
+#contentAreaContextMenu menupopup .scrollbox-innerbox::after{ 
+  display: none;
+}
+
+/* You could scroll the menu without this - safe to remove if that's not a problem*/
+#contentAreaContextMenu .scrollbox-innerbox{
+  overflow: hidden;
+}
