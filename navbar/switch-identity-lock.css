@@ -1,0 +1,9 @@
+/*
+ * Flip the position of the identity icon and SSL lock
+ *
+ * Contributor(s): Madis0
+ */
+
+#identity-box {
+  direction: rtl;
+}
