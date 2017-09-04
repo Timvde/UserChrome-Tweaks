@@ -1,0 +1,10 @@
+/*
+ * Prevent tab overflow as long as possible without making them hard to click
+ *
+ * Contributor(s): Madis0
+ */
+
+.tabbrowser-tab {
+  min-width: 1em !important;
+  clip-width: 1em !important;
+}
