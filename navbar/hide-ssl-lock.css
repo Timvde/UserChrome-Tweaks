@@ -1,0 +1,9 @@
+/*
+ * Hide the green lock indicating SSL from the location bar
+ *
+ * Contributor(s): Madis0
+ */
+
+#urlbar[pageproxystate="valid"] :-moz-any(.verifiedDomain,.verifiedIdentity) #connection-icon {
+  display: none !important;
+}
