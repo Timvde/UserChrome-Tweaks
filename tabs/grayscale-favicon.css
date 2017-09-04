@@ -1,0 +1,9 @@
+/*
+ * Makes the favicon grayscale to fit better in flat design
+ *
+ * Contributor(s): Madis0, Timvde
+ */
+
+tab .tab-icon, .tab-icon-image {
+  filter: grayscale(1) brightness(0.5) contrast(1) invert(1); /* Remove invert(1) to make it dark */
+}
