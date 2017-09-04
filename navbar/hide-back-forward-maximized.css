@@ -1,0 +1,11 @@
+/*
+ * Hide the back and forward buttons, but only when the window is maximized
+ *
+ * Particularly useful in combination with an add-on like MileWideBack
+ *
+ * Contributor(s): Madis0
+ */
+
+#main-window[sizemode="maximized"] :-moz-any(#back-button, #forward-button) {
+  display: none !important;
+}

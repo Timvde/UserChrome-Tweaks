@@ -1,0 +1,9 @@
+/*
+ * Hide the back and forward buttons
+ *
+ * Contributor(s): Madis0, Timvde
+ */
+
+#main-window :-moz-any(#back-button, #forward-button) {
+  display: none !important;
+}
