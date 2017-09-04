@@ -1,0 +1,11 @@
+/*
+ * Give the location bar a black background when in private browsing mode
+ *
+ * Contributor(s): Madis0
+ */
+
+#main-window[privatebrowsingmode="temporary"] #urlbar
+{
+  background: black !important;
+  color: white !important;
+}
