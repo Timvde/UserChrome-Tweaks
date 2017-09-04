@@ -1,32 +1,44 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+/*
+ * Make the context-menu navigation items vertical
+ *
+ * Contributor(s): MrOtherGuy
+ */
 
-/* This is hacky solution but the context menu structure makes it hard to position things correctly */
-
-/* Set the navigation container vertical and disable the containers pointer events.*/
+/* Set the container vertical and disable the its pointer events */
 #contentAreaContextMenu #context-navigation:not([hidden]){ 
   -moz-box-orient: vertical !important;
   position:absolute !important;
   background-color: transparent !important;
   pointer-events: none;
 }
-/* Enable individual buttons' pointer-events which would be disabled through cascade*/
+
+/* Enable individual buttons' pointer-events which would otherwise be disabled through cascade */
 #contentAreaContextMenu #context-navigation:not([hidden]) menuitem{
   pointer-events: auto !important;
   position:absolute !important;
   margin-left:0px;
 }
 
-/* #contentAreaContextMenu #context-navigation:not([hidden])~* should work too :p */
-#contentAreaContextMenu #context-navigation:not([hidden])~menuitem,
-#contentAreaContextMenu #context-navigation:not([hidden])~menu,
-#contentAreaContextMenu #context-navigation:not([hidden])~menuseparator{
-  margin-left: 30px;
+/* Move all context-menu entries right except the navigation items */ 
+#contentAreaContextMenu #context-navigation:not([hidden])~*{
+  margin-left: 30px !important;
 }
 
-/* Not totally sure how necessary this is, but just to be safe */
-#contentAreaContextMenu menuitem:not([class="menuitem-iconic"]){
+/* Hardcode the elements' heights in case they are different on some platforms */
+#contentAreaContextMenu #context-navigation:not([hidden])~menu,
+#contentAreaContextMenu #context-navigation:not([hidden])~menuitem{
   min-height:24px !important;
-  height:24px;
+  height:24px !important;
+}
+
+/*
+* Set icon margin to 7px. Bigger values effectively move other menuitems down and make buttons bigger.
+* There's a chance that this won't correct the layout on Linux or might need a browser restart
+* because some margins appear to be defined through margin-inline- properties which don't seem to get
+* reloaded through browser toolbox.
+*/
+#context-navigation > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon{
+  margin:7px !important;
 }
 
 /* Get rid of now unimportant separator */
@@ -40,7 +52,7 @@
   margin-left: -20px !important;
 }
 
-/* Move menuitems up. Will fail if save-page item is for some reason not the topmoset*/
+/* Move menuitems up. Will fail if save-page item is for some reason not the topmost */
 #contentAreaContextMenu #context-navigation:not([hidden])~#context-savepage,
 #contentAreaContextMenu #context-navigation:not([hidden])~#context-sep-navigation+menuitem[generateditemid]{
   margin-top: -128px !important;
@@ -64,17 +76,17 @@
   display:none;
 }
 
-/* Get rid of the margin when navigation buttons are disabled. autorepeatbutton[collapsed] is only way to track such case*/
+/* Get rid of the margin when navigation buttons are disabled. Watching collapsed attribute of autorepeatbutton is only way to track such case */
 #contentAreaContextMenu autorepeatbutton[collapsed]~.arrowscrollbox-scrollbox .scrollbox-innerbox::after{
   display:none;
 }
 
-/* Also disable the margin on sub-menus unconditionally*/
+/* Also disable the margin on sub-menus unconditionally */
 #contentAreaContextMenu menupopup .scrollbox-innerbox::after{ 
   display: none;
 }
 
-/* You could scroll the menu without this - safe to remove if that's not a problem*/
+/* You could scroll the menu without this - safe to remove if that's not a problem */
 #contentAreaContextMenu .scrollbox-innerbox{
   overflow: hidden;
 }
