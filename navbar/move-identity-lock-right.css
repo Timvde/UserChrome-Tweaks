@@ -1,0 +1,26 @@
+/*
+ * Move the identity icon and SSL lock to the right of the location bar
+ *
+ * Contributor(s): Madis0
+ */
+
+#identity-box
+{
+  -moz-box-ordinal-group: 5 !important;
+}
+
+.urlbar-input
+{
+  margin-left: 0.3em !important;
+}
+
+#PopupAutoCompleteRichResult .ac-site-icon
+{
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+#PopupAutoCompleteRichResult .ac-type-icon
+{
+  margin-left: 10px !important;
+}
