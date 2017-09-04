@@ -1,0 +1,20 @@
+/*
+ * Hide the info icon next to the location bar when a website doesn't
+ * have any permissions.
+ *
+ * Contributor(s): Madis0
+ */
+
+/* Hide info icon for sites that don't have permissions */
+#urlbar :not(.grantedPermissions) #identity-icon {
+        transition: 300ms !important; /* Animate icon hiding */
+	opacity: 0 !important; /* Make icons transparent */
+	-moz-margin-end: -1.1em !important; /* Hide icons by offsetting them */
+}
+
+/* Show info icon on hover, except for new tab page */
+#urlbar[pageproxystate="valid"]:hover #identity-icon {
+        transition: 300ms !important; /* Animate icon showing */
+	opacity: 1 !important; /* Make icons opaque */
+	-moz-margin-end: inherit !important; /* Use initial margins to show icons */
+}
