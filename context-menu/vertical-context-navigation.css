@@ -16,12 +16,22 @@
 #contentAreaContextMenu #context-navigation:not([hidden]) menuitem{
   pointer-events: auto !important;
   position:absolute !important;
-  margin-left:0px;
+}
+
+/*
+* These rules fix layout incompatibility between Linux and Windows
+* The padding cannot be modified on Linux so set padding on all platforms to 4px
+* and create a negative margin to counter it.
+* Small issue is that back-button height on Windows is 4px smaller than others
+*/
+#contentAreaContextMenu #context-navigation:not([hidden]) menuitem{
+  margin:-4px 0;
+  padding: 2px 4px 3px 4px;
 }
 
 /* Move all context-menu entries right except the navigation items */ 
 #contentAreaContextMenu #context-navigation:not([hidden])~*{
-  margin-left: 30px !important;
+  margin-left: 38px !important;
 }
 
 /* Hardcode the elements' heights in case they are different on some platforms */
@@ -31,25 +41,18 @@
   height:24px !important;
 }
 
-/*
-* Set icon margin to 7px. Bigger values effectively move other menuitems down and make buttons bigger.
-* There's a chance that this won't correct the layout on Linux or might need a browser restart
-* because some margins appear to be defined through margin-inline- properties which don't seem to get
-* reloaded through browser toolbox.
-*/
-#context-navigation > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon{
-  margin:7px !important;
-}
-
 /* Get rid of now unimportant separator */
 #context-sep-navigation{
   display:none;
 }
-
-/* Move text leftwards */
+/*
+* Move text leftwards.
+* Hardcoding padding-inline-start fixes different text positioning between Windows and Linux
+*/
 #contentAreaContextMenu #context-navigation:not([hidden])~menuitem .menu-text,
 #contentAreaContextMenu #context-navigation:not([hidden])~menu .menu-text{
   margin-left: -20px !important;
+  padding-inline-start: 30px !important;
 }
 
 /* Move menuitems up. Will fail if save-page item is for some reason not the topmost */
