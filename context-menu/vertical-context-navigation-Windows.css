@@ -18,25 +18,14 @@
   position:absolute !important;
 }
 
-/*
-* These rules fix layout incompatibility between Linux and Windows
-* The padding cannot be modified on Linux so set padding on all platforms to 4px
-* and create a negative margin to counter it.
-* Small issue is that back-button height on Windows is 4px smaller than others
-*/
-#contentAreaContextMenu #context-navigation:not([hidden]) menuitem{
-  margin:-4px 0;
-  padding: 2px 4px 3px 4px;
-}
-
 /* Move all context-menu entries right except the navigation items */ 
-#contentAreaContextMenu #context-navigation:not([hidden])~*{
-  margin-left: 38px !important;
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ *{
+  margin-left: 30px !important;
 }
 
 /* Hardcode the elements' heights in case they are different on some platforms */
-#contentAreaContextMenu #context-navigation:not([hidden])~menu,
-#contentAreaContextMenu #context-navigation:not([hidden])~menuitem{
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ menu,
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ menuitem{
   min-height:24px !important;
   height:24px !important;
 }
@@ -45,28 +34,27 @@
 #context-sep-navigation{
   display:none;
 }
-/*
-* Move text leftwards.
-* Hardcoding padding-inline-start fixes different text positioning between Windows and Linux
-*/
-#contentAreaContextMenu #context-navigation:not([hidden])~menuitem .menu-text,
-#contentAreaContextMenu #context-navigation:not([hidden])~menu .menu-text{
+/* Move only text leftwards - not the whole elements */
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ menuitem > .menu-text,
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ menu > .menu-text{
   margin-left: -20px !important;
-  padding-inline-start: 30px !important;
 }
 
 /* Move menuitems up. Will fail if save-page item is for some reason not the topmost */
-#contentAreaContextMenu #context-navigation:not([hidden])~#context-savepage,
-#contentAreaContextMenu #context-navigation:not([hidden])~#context-sep-navigation+menuitem[generateditemid]{
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ #context-savepage,
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ #context-sep-navigation + menuitem[generateditemid]{
   margin-top: -128px !important;
 }
 
 /* There can be generated menuitems such as Edit-page that appears on MDN so need to handle them */
-#contentAreaContextMenu #context-navigation:not([hidden])~menuitem[generateditemid]~#context-savepage{
+#contentAreaContextMenu #context-navigation:not([hidden]) ~ menuitem[generateditemid] ~ #context-savepage{
   margin-top: unset !important;
 }
 
-/* It's hard to explain why this is necessary, it has to do with how context menu height is calculated */
+/*
+* This is needed because it is necessary to adjust the bottom * margin of last ENABLED element. So create a pseudo-element 
+* which will always be last and set it's margin.
+*/
 #contentAreaContextMenu .scrollbox-innerbox::after{ 
   content: "";
   position: absolute;
@@ -80,7 +68,7 @@
 }
 
 /* Get rid of the margin when navigation buttons are disabled. Watching collapsed attribute of autorepeatbutton is only way to track such case */
-#contentAreaContextMenu autorepeatbutton[collapsed]~.arrowscrollbox-scrollbox .scrollbox-innerbox::after{
+#contentAreaContextMenu autorepeatbutton[collapsed] ~ .arrowscrollbox-scrollbox .scrollbox-innerbox::after{
   display:none;
 }
 
@@ -93,3 +81,11 @@
 #contentAreaContextMenu .scrollbox-innerbox{
   overflow: hidden;
 }
+/* Effectively remove vertical separator line on Windows7 */
+@media (-moz-os-version: windows-win7){
+  #contentAreaContextMenu{
+    -moz-appearance:none !important;
+    border: 1px solid darkgrey !important;
+  }
+}
+
