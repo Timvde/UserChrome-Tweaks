@@ -9,6 +9,7 @@
   border: unset !important;
   padding: var(--toolbarbutton-inner-padding) !important;
   border-radius: var(--toolbarbutton-border-radius) !important;
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
 }
 
 /* Hover and Active states to mimic other buttons */
