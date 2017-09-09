@@ -1,9 +1,12 @@
 /*
- * Remove "Send Page to Device" from context menu.
+ * Remove "Send Page to Device", "Send Link to Device", 
+ * "Send Tab to Device" from context menu.
  *
  * Contributor(s): PilzAdam
  */
 
-#context-sendpagetodevice, #context-sep-sendpagetodevice {
+#context-sendpagetodevice, #context-sep-sendpagetodevice,
+#context-sendlinktodevice, #context-sep-sendlinktodevice,
+#context_sendTabToDevice, #context_sendTabToDevice_separator {
   display: none !important;
 }
