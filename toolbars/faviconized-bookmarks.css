@@ -6,7 +6,7 @@
   Tested on Firefox 55, Windows 7
 */
 
-/** Hides bookmark text when they are displayed on a toolbar */
+/** Hides bookmark text for all bookmarks displayed in a toolbar */
 .bookmark-item > .toolbarbutton-text  {
   display: none !important;
 }
