@@ -1,0 +1,18 @@
+/*
+ * When bookmarks are displayed on a toolbar, they appear as favicons. (Text is hidden)
+ * 
+ * Screenshot: https://s26.postimg.org/lnb9akmbd/Faviconized-bookmarks.png
+ * 
+ * Tested on Firefox 55, Windows 7
+ * Contributor(s): Okamoi
+ */
+
+/* Hides bookmark text for all bookmarks displayed in a toolbar */
+.bookmark-item > .toolbarbutton-text  {
+  display: none !important;
+}
+
+/* Small visual tweak so it looks exactly the same as if the bookmark really had no text */
+.bookmark-item > .toolbarbutton-icon  {
+  margin-inline-end: 0px !important;
+}
