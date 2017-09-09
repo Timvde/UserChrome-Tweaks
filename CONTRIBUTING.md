@@ -2,6 +2,10 @@
 
 First of all, thank you for your interest in contributing! Here are some guidelines.
 
+## File lay-out
+
+Please use the template as provided in `template.css`.
+
 ## Code style
 
 * For indentation, 2 spaces are used.
@@ -27,7 +31,11 @@ Filename use snake-case. If a file contains platform-specific CSS, the platform 
 
 ## Git usage
 
-In order to maintain a clean history, all pull requests are rebased. In order to keep the master branch of your fork clean, you should *not* use it to make pull requests. Instead, develop on another branch and use your master branch for tracking this repository's master branch only.
+In order to keep the master branch of your fork clean, you should *not* use it to make pull requests. Instead, develop on another branch and use your master branch for tracking this repository's master branch only.
+
+Please create one pull request per style you wish to add. This allows for a clean squash, rebase and merge later on, to achieve a nice git history without too much hassle.
+
+If you are not familiar with git, feel free to just create an issue with the style you want to add.
 
 ## Licensing
 
