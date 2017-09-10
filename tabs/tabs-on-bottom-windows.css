@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* This style will move your tabs to the bottom. */
+/* This style will move your tabs to the bottom. Best used with the titlebar enabled*/
 
 /*Tabs On Bottom*/
 #TabsToolbar {
@@ -10,4 +10,9 @@
 }
 #nav-bar{
   border-top-width: 0px !important;
+}
+
+/*Bookmarks Bar fix*/
+#PersonalToolbar {
+  -moz-box-ordinal-group: 2;
 }
