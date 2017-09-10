@@ -1,0 +1,45 @@
+/*
+ * Description: Auto-hide sidebar.
+ *
+ * Contributor(s): img2tab
+ */
+
+/* To right-align the sidebar, replace all occurrences of "left" with "right", and "margin-right" with "margin-left" */
+
+:root {
+  --sidebar-hover-width: 10px;
+  --sidebar-visible-width: 200px;
+}
+
+#sidebar-box {
+  position: relative !important;
+  overflow-x: hidden !important;
+  margin-right: calc(var(--sidebar-hover-width) * -1) !important;
+  left: var(--sidebar-hover-width) !important;
+  min-width: var(--sidebar-hover-width) !important;
+  max-width: var(--sidebar-hover-width) !important;
+}
+
+#sidebar-box:hover {
+  margin-right: calc(var(--sidebar-visible-width) * -1) !important;
+  left: var(--sidebar-visible-width) !important;
+  min-width: var(--sidebar-visible-width) !important;
+  max-width: var(--sidebar-visible-width) !important;
+}
+
+#sidebar {
+  opacity: 0 !important;
+}
+
+#sidebar:hover {
+  opacity: 1 !important;
+}
+
+/* #sidebar-header is hidden by default, change "none" to "inherit" to restore it. */
+#sidebar-header {
+  display: none !important;
+}
+
+/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
+#sidebar-splitter {
+}
