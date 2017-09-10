@@ -1,0 +1,32 @@
+/*
+ * Auto-hide the URL-bar, show on hover or focus
+ *
+ * Contributor(s): Alex Vallat
+ */
+
+:root[uidensity=compact] #browser {
+  margin-top:-32px !important;
+}
+
+#browser {
+  margin-top:-38px !important;
+}
+
+:root[uidensity=touch] #browser {
+  margin-top:-40px !important;
+}
+
+#nav-bar:not([customizing])
+{
+  overflow-y: hidden;
+  max-height:0;
+  min-height:0;
+  opacity: 0;
+}
+
+:hover > #nav-bar:not([customizing]),
+#nav-bar:not([customizing]):focus-within {
+  max-height: 42px;
+  opacity: 1;
+  transition: opacity 0.15s ease-in, max-height 0.15s linear;
+}
