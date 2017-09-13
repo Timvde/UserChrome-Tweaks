@@ -14,7 +14,7 @@
 #sidebar-box {
     position:                            relative !important;
     overflow-x:                            hidden !important;
-    margin-right  : calc(var(--hover-width) * -1) !important;
+    margin-right:   calc(var(--hover-width) * -1) !important;
     left:                      var(--hover-width) !important;
     min-width:                 var(--hover-width) !important;
     max-width:                 var(--hover-width) !important;
