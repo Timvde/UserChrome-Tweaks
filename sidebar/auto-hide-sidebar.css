@@ -4,30 +4,27 @@
  * Contributor(s): img2tab
  */
 
+/* To right-align the sidebar, replace all occurrences of "left" with "right", and "margin-right" with "margin-left" */
 
-/*
- * #sidebar-box specifies the cursor distance from the edge for the sidebar to become visible. (default: 10px)
- * #sidebar-box:hover specifies the sidebar's width when visible. (default: 200px) 
- * If the sidebar is right-aligned replace "left" with "right", and "margin-right" with "margin-left"
- * Mind that "margin-right" is negatiive.
- * #sidebar-header is always hidden, remove line 41 to restore it.
- * The divider between the sidebar and the rest of the browser can be customized with #sidebar-splitter.
- */
+:root {
+    --hover-width:    10px;
+    --visible-width: 200px;
+}
 
 #sidebar-box {
-    position:   relative !important;
-    overflow-x:   hidden !important;
-    margin-right:  -10px !important;
-    left:           10px !important;
-    min-width:      10px !important;
-    max-width:      10px !important;
+    position:                            relative !important;
+    overflow-x:                            hidden !important;
+    margin-right  : calc(var(--hover-width) * -1) !important;
+    left:                      var(--hover-width) !important;
+    min-width:                 var(--hover-width) !important;
+    max-width:                 var(--hover-width) !important;
 }
 
 #sidebar-box:hover {
-    margin-right: -200px !important;
-    left:          200px !important;
-    min-width:     200px !important;
-    max-width:     200px !important;
+    margin-right: calc(var(--visible-width) * -1) !important;
+    left:                    var(--visible-width) !important;
+    min-width:               var(--visible-width) !important;
+    max-width:               var(--visible-width) !important;
 }
 
 #sidebar {
@@ -38,9 +35,13 @@
     opacity: 1 !important;
 }
 
+/* #sidebar-header is hidden by default, change "none" to "inherit" to restore it. */
+
 #sidebar-header {
     display: none !important;
 }
+
+/* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
 
 #sidebar-splitter {
 }
