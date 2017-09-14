@@ -21,3 +21,9 @@
   padding: 0px 5px 0px 75px !important; /*The 75px is a fix for MacOS to make room for the window controls*/
   /*margin-top: -5px !important; This is a dumb hack to get rid of the "collapsed" tab bar that still shows up.  This only seems to affect pre-57 versions, unnecessary for 57+*/
 }
+
+/*position window controls.  Only for MacOS*/
+#titlebar-buttonbox-container {
+  margin-left: 5px !important;
+  margin-top: 10.5px !important;
+}
