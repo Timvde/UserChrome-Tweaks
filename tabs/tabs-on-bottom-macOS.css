@@ -29,3 +29,9 @@
   padding-inline-start: 0px !important;
   padding-inline-end: 0px !important;
 }
+
+/* position window controls.  Only for MacOS */
+#titlebar-buttonbox-container {
+  margin-left: 5px !important;
+  margin-top: 10.5px !important;
+}
