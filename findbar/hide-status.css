@@ -1,0 +1,9 @@
+/*
+ * Hides the status text on findbar (Phrase not found/Reached end of page...)
+ *
+ * Contributor(s): Madis0
+ */
+
+.findbar-find-status {
+  visibility: collapse !important;
+}
