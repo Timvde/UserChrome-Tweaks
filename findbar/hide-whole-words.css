@@ -1,0 +1,9 @@
+/*
+ * Hides the Whole Words button on findbar
+ *
+ * Contributor(s): Madis0
+ */
+
+.findbar-entire-word {
+  visibility: collapse !important;
+} 
