@@ -1,0 +1,9 @@
+/*
+ * Hides the Match Case button on findbar
+ *
+ * Contributor(s): Madis0
+ */
+
+.findbar-case-sensitive {
+  visibility: collapse !important;
+} 
