@@ -1,0 +1,9 @@
+/*
+ * Hide the puzzle icon indicating an extension page from the location bar
+ *
+ * Contributor(s): Madis0
+ */
+ 
+#urlbar[pageproxystate="valid"] > #identity-box.extensionPage > #extension-icon {
+  display: none !important;
+}
