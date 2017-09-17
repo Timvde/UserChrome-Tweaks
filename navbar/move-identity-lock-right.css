@@ -4,23 +4,28 @@
  * Contributor(s): Madis0
  */
 
-#identity-box
+#urlbar > #identity-box
 {
-  -moz-box-ordinal-group: 5 !important;
+  -moz-box-ordinal-group: 2 !important; /* Move identity box to the right */
 }
 
-.urlbar-input
+.urlbar-input-box
 {
-  margin-left: 0.3em !important;
+  margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
 }
 
-#PopupAutoCompleteRichResult .ac-site-icon
-{
-  margin-left: 10px !important;
-  margin-right: 10px !important;
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI, 
+#urlbar[pageproxystate="valid"] > #identity-box.extensionPage, 
+#urlbar-display-box {
+  margin-inline-end: 0em !important; /* Remove the margin at the end for EV SSL, addons, internal */
+  border-inline-end: none !important; /* Remove the border at the end EV SSL, addons, internal */
 }
 
-#PopupAutoCompleteRichResult .ac-type-icon
+/* Fix autocomplete item display */
+#PopupAutoCompleteRichResult .ac-site-icon,
+#PopupAutoCompleteRichResult .ac-type-icon 
 {
-  margin-left: 10px !important;
+  margin-left: 300em !important;
+  margin-right: -294em !important;
 }
