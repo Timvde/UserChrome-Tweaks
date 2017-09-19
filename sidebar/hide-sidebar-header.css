@@ -1,0 +1,12 @@
+/*
+ * Description: hide the header of the sidebar, which takes quite a bit of space.
+ * Use with caution: you will no longer have a way to switch between sidebar panes,
+ * so make sure you have some other way of doing so if you need to.
+ * (For example, an extension can add a toolbar button which opens its sidebar pane.)
+ *
+ * Contributor(s): Chris Morgan
+ */
+
+#sidebar-header {
+  display: none;
+}
