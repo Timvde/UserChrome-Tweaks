@@ -1,0 +1,54 @@
+/*
+ * Description: Moves the tab bar down the window. Only for Windows 7.
+ * 
+ * Screenshot: https://s26.postimg.org/u6w5t4nu1/Tabs-bottom-of-window.png
+ * 
+ * Bugs in fullscreen:
+ *   1/ The padding at the bottom of the window does not disappear.
+ *   2/ Top-of-the-window UI, while it disappears correctly and reappears just fine when moving 
+ *      the mouse near the top of the screen, doesn't disappear again. (Work around: Turn off full screen and then on again)
+ * 
+ * Tested on Windows 7, Firefox 55
+ *
+ * Contributor(s): Reddit's /u/marciiF, Okamoi
+ * Licenced GPLv3
+ */
+
+
+/* Required for the tab bar to be visible down the window */
+#content-deck  {
+  position: relative !important;
+}
+
+/* Makes sure the halo effect on the tabs bar appears below content */
+#navigator-toolbox  {
+  overflow: initial !important;
+}
+
+/* Move tabs bar down */
+#main-window[tabsintitlebar] #TabsToolbar  {
+  transform: translateY( calc(100vh - var(--tab-min-height)) ) !important;
+}
+/* Move tabs bar down when the profile has `browser.tabs.drawInTitlebar` set to `false` */
+#main-window:not([tabsintitlebar]) #TabsToolbar  {
+  transform: translateY(100vh) !important;
+}
+
+/* Remove margin at the top since the tab bar is going down */
+#main-window[tabsintitlebar] #navigator-toolbox:not([fullscreenShouldAnimate])  {
+  margin-top: calc(var(--space-above-tabbar) - var(--tab-min-height)) !important;
+}
+/* Remove margin at the top when the profile has `browser.tabs.drawInTitlebar` set to `false` */
+#main-window:not([tabsintitlebar]) #navigator-toolbox:not([fullscreenShouldAnimate])  {
+  margin-top: calc(0px - var(--tab-min-height)) !important;
+}
+
+/* Maximized window requires different margin to make room for minimize/restore/close buttons. */
+#main-window[tabsintitlebar][sizemode="maximized"] #navigator-toolbox:not([fullscreenShouldAnimate])  {
+  margin-top: calc(var(--space-above-tabbar) - var(--tab-min-height) + 12px) !important;
+}
+
+/* This adds padding to the bottom of the window to make room for the tabs bar. It should disappear on full screen but doesn't (TODO) */
+#browser-panel  {
+  padding-bottom: var(--tab-min-height) !important;
+}
