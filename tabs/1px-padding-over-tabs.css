@@ -1,0 +1,9 @@
+/*
+ * Adds 1px padding above the tabs. That way you can easily grab and drag the browser window.
+ *
+ * Contributor(s): BubiBalboa via reddit.com/user/marciiF
+ */
+ 
+#TabsToolbar {
+  padding-top: 1px !important;
+}
