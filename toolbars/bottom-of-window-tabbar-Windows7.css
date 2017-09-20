@@ -7,6 +7,8 @@
  *   1/ Top-of-the-window UI, while it disappears correctly and reappears just fine when moving 
  *      the mouse near the top of the screen, doesn't disappear again. (Work around: Turn off full screen and then on again)
  *   2/ The tab bar at the bottom of the window does not reappear with the rest of the UI. (Same work around)
+ *   
+ * TODO: Better support menubar
  * 
  * Tested on Windows 7, Firefox 55
  *
