@@ -22,11 +22,3 @@
 .tab-line[selected=true] {
   background-color: white !important; /* Make the line white, remove this for default color */
 }
-
-.tabbrowser-tab::after, .tabbrowser-tab::before {
-   border-left: none !important; /* Remove borders from inactive tabs */
-}
-
-:root {
-  --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
-}
