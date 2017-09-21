@@ -19,3 +19,8 @@
 :root[uidensity=compact] #nav-bar .toolbarbutton-1 {
   padding: 0px !important;
 }
+
+/* Compatibility with auto-hide.css */
+:root[uidensity=compact] #navigator-toolbox {
+  --nav-bar-height: 31px !important;
+}
