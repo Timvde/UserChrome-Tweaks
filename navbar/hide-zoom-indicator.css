@@ -6,7 +6,12 @@
  * Contributor(s): BubiBalboa
  */
 
-
+/* Hides the zoom indicator */
 #urlbar-zoom-button { 
   display: none !important; 
+}
+
+/* Hides vertical separator line to make it look cleaner  */
+#urlbar-go-button, #reload-button, #stop-button {
+	border-inline-start: initial !important;
 }
