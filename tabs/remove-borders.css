@@ -1,0 +1,13 @@
+/*
+ * Removes the side borders from active and inactive tabs.
+ *
+ * Contributor(s): Madis0
+ */
+ 
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+   border-left: none !important; /* Remove borders from inactive tabs */
+}
+
+:root {
+  --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
+}
