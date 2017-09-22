@@ -1,0 +1,9 @@
+/*
+ * Hide the Containers name from address bar
+ *
+ * Contributor(s): Madis0
+ */
+
+#userContext-label {
+  display: none !important;
+}
