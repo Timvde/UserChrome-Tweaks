@@ -1,0 +1,17 @@
+/*
+ * Removes zoom indicator from Awesome Bar
+ *
+ * Screenshot: https://i.imgur.com/IZKicTI.png
+ *
+ * Contributor(s): BubiBalboa
+ */
+
+/* Hides the zoom indicator */
+#urlbar-zoom-button { 
+  display: none !important; 
+}
+
+/* Hides vertical separator line to make it look cleaner */
+#pageActionSeparator { 
+  display: none !important;
+}
