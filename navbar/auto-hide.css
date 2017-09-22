@@ -1,0 +1,63 @@
+/*
+ * Auto-hide the URL-bar, show on hover or focus
+ *
+ * Contributor(s): Alex Vallat
+ */
+
+:root[uidensity=compact] #navigator-toolbox {
+  --nav-bar-height: 33px;
+}
+
+:root:not([uidensity]) #navigator-toolbox {
+  --nav-bar-height: 39px;
+}
+
+:root[uidensity=touch] #navigator-toolbox {
+  --nav-bar-height: 41px;
+}
+
+#navigator-toolbox {
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  --trigger-area-height: 5px;
+  --extra-height: 2px; /* Not sure where the extra 2px comes from, but is necessary to line up right */
+}
+
+@media (-moz-os-version: windows-win7) {
+  /* Windows 7 has an extra 4px top margin when not maximized */
+  :root[sizemode="normal"] #navigator-toolbox {
+    --tabbar-height: calc(4px + var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  }
+}
+
+#toolbar-menubar {
+  margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
+}
+
+:root:not([customizing]) #nav-bar
+{
+  overflow-y: hidden;
+  max-height:0;
+  min-height:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  opacity: 0;
+}
+
+:root:not([customizing]) :hover > #nav-bar,
+:root:not([customizing]) #nav-bar:focus-within {
+  max-height: var(--nav-bar-height);
+  opacity: 1;
+  transition: opacity 0.15s ease-in, max-height 0.15s linear;
+}
+
+:root:not([customizing]) #navigator-toolbox {
+  max-height: calc(var(--tabbar-height) + var(--trigger-area-height) + var(--extra-height));
+  min-height: var(--tabbar-height);
+  margin-bottom: calc(-1 * var(--trigger-area-height));
+}
+
+:root:not([customizing]) #navigator-toolbox:hover,
+:root:not([customizing]) #navigator-toolbox:focus-within {
+  max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
+  margin-bottom: calc(1px - var(--nav-bar-height));
+}
