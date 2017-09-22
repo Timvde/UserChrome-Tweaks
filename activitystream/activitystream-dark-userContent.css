@@ -1,0 +1,18 @@
+/*
+ * Description: Makes the activity stream page look decent with the dark theme.
+ *
+ * Screenshot: https://imgur.com/a/WcxGk
+ *
+ * Contributor(s): Andrei Cristian Petcu
+ */
+
+@-moz-document url("about:home"), url("about:newtab") {
+  .activity-stream {
+    background-color: #474749 !important;
+  }
+}
+@-moz-document url("about:blank") {
+  body {
+    background-color: #474749 !important;
+  }
+}
