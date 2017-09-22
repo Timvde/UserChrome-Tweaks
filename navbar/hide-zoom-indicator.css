@@ -11,7 +11,7 @@
   display: none !important; 
 }
 
-/* Hides vertical separator line to make it look cleaner  */
-#urlbar-go-button, #reload-button, #stop-button {
-  border-inline-start: initial !important;
+/* Hides vertical separator line to make it look cleaner */
+#pageActionSeparator { 
+  display: none !important;
 }
