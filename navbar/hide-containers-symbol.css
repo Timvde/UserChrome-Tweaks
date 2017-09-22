@@ -1,0 +1,9 @@
+/*
+ * Hide the Containers symbol from address bar
+ *
+ * Contributor(s): Madis0
+ */
+
+#userContext-indicator {
+  display: none !important;
+}
