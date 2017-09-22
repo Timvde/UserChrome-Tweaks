@@ -1,0 +1,18 @@
+/*
+ * Bookmarks toolbar is visible only on new tab page, just like Chrome.
+ *
+ * Screenshot: https://vimeo.com/235059188
+ * Video: https://vimeo.com/240436456
+ *
+ * Contributor(s): https://www.reddit.com/user/AJtfM7zT4tJdaZsm and Andrei Cristian Petcu
+ */
+
+#main-window #PersonalToolbar {
+  visibility: collapse !important;
+}
+
+#main-window[title^="about:newtab"] #PersonalToolbar,
+#main-window[title^="New Tab"] #PersonalToolbar,
+#main-window[title^="Nightly"] #PersonalToolbar {
+  visibility: visible !important;
+}
