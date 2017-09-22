@@ -5,85 +5,70 @@
  */
 
 /* Compact density */
+:root[uidensity=compact] {
+  --tabs-margin-left: 5.5em;
+  --tabs-padding-left: 34.5em;
+  --tabs-margin-right: 2em;
  
-/* Adjust tab bar to get space first */
+  --nav-margin-top: -2em;
+  --nav-margin-right: 60vw;
+  --nav-margin-bottom: -0.3em;
 
-:root[uidensity=compact] #TabsToolbar {
-    margin-left: 5.5em !important;
-    padding-left: 34.5em !important; /* Left margin for nav bar */
-    margin-right: 2em !important; /* Right margin for caption button, menu */
-    margin-bottom: -0.1em !important; /* Remove bottom border */
-}
-
-/* Move nav bar to top left */
-
-:root[uidensity=compact] #nav-bar {
-    margin-top: -2em !important; /* Move nav bar up */
-    margin-right: 60vw !important; /* Cut it off with defined width */
-    margin-bottom: -0.3em !important; /* Remove bottom border */
-    background-color: transparent !important; /* Make it use tab bar colors */
-}
-
-/* Move menu button to top right */
-
-:root[uidensity=compact] #PanelUI-button {
-    position: fixed; /* Fixed position for menu */
-    top: 0.05em; /* Add some margin to top */
-    right: 0em; /* Move it to right side (adjust for caption buttons) */
-    border-left: none !important;
+  --menu-margin-top: 0.05em;
+  --menu-margin-right: 0em;
 }
 
 /* Touch density */
+:root[uidensity=touch] {
+  --tabs-margin-left: 7.5em;
+  --tabs-padding-left: 34em;
+  --tabs-margin-right: 2.3em;
  
-/* Adjust tab bar to get space first */
+  --nav-margin-top: -2.5em;
+  --nav-margin-right: 60vw;
+  --nav-margin-bottom: -0.3em;
 
-:root[uidensity=touch] #TabsToolbar {
-    margin-left: 7.5em !important;
-    padding-left: 34em !important; /* Left margin for nav bar */
-    margin-right: 2.3em !important; /* Right margin for caption button, menu */
-    margin-bottom: -0.1em !important; /* Remove bottom border */
-}
-
-/* Move nav bar to top left */
-
-:root[uidensity=touch] #nav-bar {
-    margin-top: -2.5em !important; /* Move nav bar up */
-    margin-right: 60vw !important; /* Cut it off with defined width */
-    margin-bottom: -0.3em !important; /* Remove bottom border */
-    background-color: transparent !important; /* Make it use tab bar colors */
-}
-
-/* Move menu button to top right */
-
-:root[uidensity=touch] #PanelUI-button {
-    position: fixed; /* Fixed position for menu */
-    top: 0.1em; /* Add some margin to top */
-    right: 0em; /* Move it to right side (adjust for caption buttons) */
-    border-left: none !important;
+  --menu-margin-top: 0.1em;
+  --menu-margin-right: 0em;
 }
 
 /* Normal density */
+:root {
+  --tabs-margin-left: 6.4em;
+  --tabs-padding-left: 34em;
+  --tabs-margin-right: 2em;
  
+  --nav-margin-top: -2.3em;
+  --nav-margin-right: 60vw;
+  --nav-margin-bottom: -0.3em;
+
+  --menu-margin-top: 0.15em;
+  --menu-margin-right: 0em;
+}
+
 /* Adjust tab bar to get space first */
+
 #TabsToolbar {
-    margin-left: 6.4em !important; /* Keep some margin to make toolbar buttons visible */
-    padding-left: 34em !important; /* Left margin for nav bar */
-    margin-right: 2em !important; /* Right margin for caption button, menu */
-    margin-bottom: -0.1em !important; /* Remove bottom border */
+    margin-left: var(--tabs-margin-left) !important; /* Keep margin for button background */
+    padding-left: var(--tabs-padding-left) !important; /* Left margin for nav bar */
+    margin-right: var(--tabs-margin-right) !important; /* Right margin for caption button, menu */
+    margin-bottom: -0.1em; !important; /* Remove bottom border */
 }
 
 /* Move nav bar to top left */
+
 #nav-bar {
-    margin-top: -2.3em !important; /* Move nav bar up */
-    margin-right: 60vw !important; /* Cut it off with defined width */
-    margin-bottom: -0.3em !important; /* Remove bottom border */
+    margin-top: var(--nav-margin-top) !important; /* Move nav bar up */
+    margin-right: var(--nav-margin-right) !important; /* Cut it off with defined width */
+    margin-bottom: var(--nav-margin-bottom) !important; /* Remove bottom border */
     background-color: transparent !important; /* Make it use tab bar colors */
 }
 
 /* Move menu button to top right */
+
 #PanelUI-button {
     position: fixed; /* Fixed position for menu */
-    top: 0.15em; /* Add some margin to top */
-    right: 0em; /* Move it to right side (adjust for caption buttons) */
+    top: var(--menu-margin-top); /* Add some margin to top */
+    right: var(--menu-margin-right); /* Move it to right side (adjust for caption buttons) */
     border-left: none !important; /* Remove menu border */
 }
