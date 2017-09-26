@@ -6,8 +6,8 @@
  * Contributor(s): Andrei Cristian Petcu
  */
 
-browser {
-  background-color: #474749 !important;
+.browserContainer {
+  background-color: var(--url-and-searchbar-background-color, hsla(0,0%,100%,.8)) !important;
 }
 
 #sidebar {
@@ -16,12 +16,4 @@ browser {
 
 .sidebar-placesTree {
   background-color: white !important;
-}
-
-#sidebar {
-        background-color: white !important;
-}
-
-.sidebar-placesTree {
-        background-color: white !important;
 }
