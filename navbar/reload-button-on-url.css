@@ -1,0 +1,20 @@
+/*
+ * Reload Button on URL Bar
+ * Puts the reload button after the page action buttons.
+ * License: GPLv3
+ * Author: Admicos
+ */
+
+#reload-button,
+#stop-button {
+	transform: translate(-2px);
+}
+
+#urlbar-container {
+	margin-left: -32px;
+	transform: translate(32px);
+}
+
+#page-action-buttons {
+	transform: translate(-23px);
+}
