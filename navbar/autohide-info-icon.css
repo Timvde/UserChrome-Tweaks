@@ -13,7 +13,7 @@
 }
 
 /* Show info icon on navbar hover, except for new tab page search icon */
-#navigator-toolbox:hover #urlbar[pageproxystate="valid"] #identity-icon {
+#urlbar[pageproxystate="valid"]:hover #identity-icon {
         transition: 300ms !important; /* Animate icon showing */
 	opacity: 1 !important; /* Make icons opaque */
 	-moz-margin-end: initial !important; /* Use initial margins to show icons */
