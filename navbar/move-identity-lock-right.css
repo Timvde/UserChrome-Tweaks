@@ -1,7 +1,7 @@
 /*
  * Move the identity icon and SSL lock to the right of the location bar
  *
- * Contributor(s): Madis0
+ * Contributor(s): Madis0, reddit user BatDogOnBatMobile
  */
 
 #urlbar > #identity-box
@@ -9,17 +9,14 @@
   -moz-box-ordinal-group: 2 !important; /* Move identity box to the right */
 }
 
+#urlbar > #page-action-buttons
+{
+  -moz-box-ordinal-group: 3 !important; /* Move page action buttons more to the right, to keep identity box on the left of them */
+}
+
 .urlbar-input-box
 {
   margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI, 
-#urlbar[pageproxystate="valid"] > #identity-box.extensionPage, 
-#urlbar-display-box {
-  margin-inline-end: 0em !important; /* Remove the margin at the end for EV SSL, addons, internal */
-  border-inline-end: none !important; /* Remove the border at the end EV SSL, addons, internal */
 }
 
 /* Fix autocomplete item display */
