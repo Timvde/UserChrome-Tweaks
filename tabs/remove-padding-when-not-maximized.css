@@ -1,6 +1,0 @@
-/* This userChrome Hack is only tested on Winodws
-   CC-BY, Gacel Perfinian */
-
-.titlebar-placeholder[type="pre-tabs"], .titlebar-placeholder[type="post-tabs"] {
-  display:none !important;
-}
