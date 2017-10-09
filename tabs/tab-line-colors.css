@@ -1,0 +1,21 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ * Tab line matches container color, show on hover on background tabs
+ *
+ * Contributor(s): Isaac-Newt
+ */
+
+.tabbrowser-tab[usercontextid] .tab-line{
+  background-color:var(--identity-tab-color)!important;
+}
+
+.tabbrowser.tab[usercontextid] .tab-line {
+  background:var(--identity-tab-color) !important;
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+  background: none !important;
+}
