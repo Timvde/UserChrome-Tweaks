@@ -1,0 +1,13 @@
+/*
+ * Description: Removes the space while on windowed ("restored") mode. Windows only.
+ *
+ * Screenshot: https://imgur.com/a/uKX3X
+ *
+ * Contributor(s): Gacel Perfinian
+ *
+ * License: Any of the following licences: CC-BY, GPL (any version released by FSF), MIT, MPLv2.
+ */
+
+.titlebar-placeholder[type="pre-tabs"], .titlebar-placeholder[type="post-tabs"] {
+  display:none !important;
+}
