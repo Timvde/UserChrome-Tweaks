@@ -1,0 +1,51 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ * This style will move your tabs to the bottom. Currently tested on MacOS Sierra.
+ *
+ * Contributor(s): Isaac-Newt, Ivan0xFF
+ */
+
+/*Tabs On Bottom*/
+#TabsToolbar {
+  -moz-box-ordinal-group: 2;
+}
+
+#nav-bar{
+  border-top-width: 0px !important;
+}
+
+/*Remove extra tab bar space*/
+#TabsToolbar {
+  padding-inline-start: 0px !important;
+  margin-bottom: none !important;
+}
+
+#titlebar-placeholder-on-TabsToolbar-for-captions-buttons {
+  display: none;
+}
+
+.box-inherit .scrollbox-innerbox {
+  margin-right: 0 !important;
+}
+
+#TabsToolbar .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+  padding-inline-start: 0px !important;
+  padding-inline-end: 0px !important;
+}
+
+/* Position window controls */
+#titlebar-buttonbox-container {
+  margin-left: 5px !important;
+  margin-top: 5px !important;
+}
+
+/*
+ * Make room for window controls.
+ * Only apply this style when not in fullscreen mode.
+ */
+#main-window:not([inFullscreen]) #nav-bar{
+  padding: 0px 5px 0px 75px !important;
+}

@@ -1,0 +1,23 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ * This style will move your tabs to the bottom. Best used with the titlebar enabled.
+ *
+ * Contributor(s): Isaac-Newt
+ */
+
+/* Tabs On Bottom */
+#TabsToolbar {
+  -moz-box-ordinal-group: 2;
+}
+
+#nav-bar{
+  border-top-width: 0px !important;
+}
+
+/* Bookmarks Bar fix */
+#PersonalToolbar {
+  -moz-box-ordinal-group: 2;
+}
