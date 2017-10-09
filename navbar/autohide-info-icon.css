@@ -12,9 +12,9 @@
 	-moz-margin-end: -1.1em !important; /* Hide icons by offsetting them */
 }
 
-/* Show info icon on hover, except for new tab page */
+/* Show info icon on navbar hover, except for new tab page search icon */
 #urlbar[pageproxystate="valid"]:hover #identity-icon {
         transition: 300ms !important; /* Animate icon showing */
 	opacity: 1 !important; /* Make icons opaque */
-	-moz-margin-end: inherit !important; /* Use initial margins to show icons */
+	-moz-margin-end: initial !important; /* Use initial margins to show icons */
 }
