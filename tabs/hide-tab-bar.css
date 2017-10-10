@@ -1,0 +1,24 @@
+/*
+ * Description: hide the browser’s tab bar (so that you can use a sidebar tabs extension instead).
+ * Note that you probably want to turn on “Title bar” in the browser’s UI customiser.
+ *
+ * Screenshot: sorry, I was lazy
+ *
+ * Contributor(s): Chris Morgan
+ */
+
+#TabsToolbar {
+  /* `display: none;` breaks the UI customiser, so we do it this less-efficient way instead. */
+  height: 0;
+  overflow: hidden;
+}
+
+.tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+  /* Undo `position: fixed !important`. */
+  position: relative !important;
+}
+
+#nav-bar {
+  /* Let’s save another pixel. */
+  border-top: 0 !important;
+}
