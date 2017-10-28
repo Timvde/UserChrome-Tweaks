@@ -13,7 +13,7 @@
 #urlbar .webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"]:not([aria-label="Stop"]) {
         transition: 300ms !important; /* Animate icon hiding */
         opacity: 0 !important; /* Make icon transparent */
-        -moz-margin-end: -1.4em !important; /* Hide icon by offsetting it */
+        -moz-margin-end: -1.5em !important; /* Hide icon by offsetting it */
 }
 
 /* Show the reload button on navbar hover */
