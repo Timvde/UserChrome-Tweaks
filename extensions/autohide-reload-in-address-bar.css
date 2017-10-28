@@ -7,10 +7,10 @@
  * Contributor(s): Madis0
  */
 
-/* Hide the extension's reload button by default */
-#urlbar .webextension-page-action[id="_e1ed7a80-7c11-4f7e-968b-79b551a0067f_-page-action"], 
-#urlbar .webextension-page-action[id="_7afe2ae8-0244-48d6-8007-6aadad9a6090_-page-action"], 
-#urlbar .webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"] {
+/* Hide the extension's reload button by default, except for stop buttons */
+#urlbar .webextension-page-action[id="_e1ed7a80-7c11-4f7e-968b-79b551a0067f_-page-action"]:not([aria-label="Stop"]), 
+#urlbar .webextension-page-action[id="_7afe2ae8-0244-48d6-8007-6aadad9a6090_-page-action"],
+#urlbar .webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"]:not([aria-label="Stop"]) {
         transition: 300ms !important; /* Animate icon hiding */
         opacity: 0 !important; /* Make icon transparent */
         -moz-margin-end: -1.4em !important; /* Hide icon by offsetting it */
