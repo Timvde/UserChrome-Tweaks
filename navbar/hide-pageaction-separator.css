@@ -1,0 +1,9 @@
+/*
+ * Hides the separator between address bar PageAction extensions and internal icons (Containers, Reader, etc.)
+ *
+ * Contributor(s): Madis0
+ */
+
+#pageActionSeparator{
+  display: none;
+}
