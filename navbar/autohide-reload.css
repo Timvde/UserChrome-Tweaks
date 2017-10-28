@@ -1,0 +1,20 @@
+/*
+ * Automatically hides the built-in reload button until navbar hover or page load
+ *
+ * Contributor(s): Madis0
+ */
+
+/* Hide the reload button by default */
+#reload-button {
+  transition: 300ms !important; /* Animate icon hiding */
+  opacity: 0 !important; /* Make icon transparent */
+  -moz-margin-end: -2em !important; /* Hide icon by offsetting it */
+}
+
+/* Show the reload button on navbar hover or page load (animation/stop button) */
+#nav-bar:hover #reload-button,
+#stop-reload-button[animate] > #reload-button:not([displaystop]) {
+  transition: 300ms !important; /* Animate icon showing */
+  opacity: 1 !important;  /* Make the icon opaque */
+  -moz-margin-end: initial !important; /* Use initial margins to show the icon */
+}
