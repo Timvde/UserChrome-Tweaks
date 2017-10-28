@@ -1,0 +1,9 @@
+/*
+ * Hides the address bar history dropmarker permanently.
+ *
+ * Contributor(s): Madis0
+ */
+
+.urlbar-history-dropmarker{
+  display: none !important;
+}
