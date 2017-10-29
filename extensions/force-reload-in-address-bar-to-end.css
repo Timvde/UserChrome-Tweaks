@@ -1,0 +1,17 @@
+/*
+ * Forces the reload button icon by extensions
+ * https://addons.mozilla.org/en-US/firefox/addon/reload-in-address-bar/
+ * https://addons.mozilla.org/en-US/firefox/addon/australis-refresh-in-url-bar/
+ * https://addons.mozilla.org/en-US/firefox/addon/reload-in-urlbar/
+ * to always appear at the end of extension icons, because sometimes installing
+ * new PageAction extensions or just toggling their appearance can make other
+ * icons shift position.
+ *
+ * Contributor(s): Madis0
+ */
+
+.webextension-page-action[id="_e1ed7a80-7c11-4f7e-968b-79b551a0067f_-page-action"],
+.webextension-page-action[id="_7afe2ae8-0244-48d6-8007-6aadad9a6090_-page-action"], 
+.webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"] {
+   -moz-box-ordinal-group: 99 !important;
+}
