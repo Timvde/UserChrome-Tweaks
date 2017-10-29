@@ -1,0 +1,26 @@
+/*
+ * Automatically hides the reload button created by any of these extensions:
+ * https://addons.mozilla.org/en-US/firefox/addon/reload-in-address-bar/
+ * https://addons.mozilla.org/en-US/firefox/addon/australis-refresh-in-url-bar/
+ * https://addons.mozilla.org/en-US/firefox/addon/reload-in-urlbar/
+ *
+ * Contributor(s): Madis0
+ */
+
+/* Hide the extension's reload button by default, except for stop buttons */
+#urlbar .webextension-page-action[id="_e1ed7a80-7c11-4f7e-968b-79b551a0067f_-page-action"]:not([aria-label="Stop"]), 
+#urlbar .webextension-page-action[id="_7afe2ae8-0244-48d6-8007-6aadad9a6090_-page-action"],
+#urlbar .webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"]:not([aria-label="Stop"]) {
+        transition: 300ms !important; /* Animate icon hiding */
+        opacity: 0 !important; /* Make icon transparent */
+        -moz-margin-end: -1.5em !important; /* Hide icon by offsetting it */
+}
+
+/* Show the reload button on navbar hover */
+#urlbar:hover .webextension-page-action[id="_e1ed7a80-7c11-4f7e-968b-79b551a0067f_-page-action"], 
+#urlbar:hover .webextension-page-action[id="_7afe2ae8-0244-48d6-8007-6aadad9a6090_-page-action"],
+#urlbar:hover .webextension-page-action[id="reload-in-urlbar_exe-boss-page-action"] {
+        transition: 300ms !important; /* Animate icon showing */
+        opacity: 1 !important; /* Make the icon opaque */
+        -moz-margin-end: initial !important; /* Use initial margins to show the icon */
+}
