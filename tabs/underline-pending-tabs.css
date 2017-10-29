@@ -1,0 +1,10 @@
+/*
+ * Underlines and dims unloaded tabs
+ *
+ * Contributor(s): josemam
+ */
+
+.tabbrowser-tab[pending] {
+  text-decoration: underline;
+  opacity: .5;
+}
