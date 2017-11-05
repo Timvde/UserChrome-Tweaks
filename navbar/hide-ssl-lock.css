@@ -1,5 +1,6 @@
 /*
- * Hide the green lock indicating SSL from the location bar
+ * Hide the green lock indicating SSL (HTTPS, encrypted connection) from the address bar. 
+ * To be used with https://addons.mozilla.org/en-US/firefox/addon/snap-http-padlocks/ in order to mark HTTP connections as insecure.
  *
  * Contributor(s): Madis0
  */
