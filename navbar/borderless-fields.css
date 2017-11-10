@@ -1,0 +1,12 @@
+/*
+ * Makes the address bar and search bar borderless. 
+ * Use the default white theme for an Edge-like look or in VivaldiFox with page colors applied 
+ * on toolbar fields for a seamless one-color look.
+ *
+ * Contributor(s): Madis0
+ */
+
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  box-shadow: none !important;
+}
