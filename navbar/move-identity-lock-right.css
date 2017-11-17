@@ -1,17 +1,27 @@
 /*
- * Move the identity icon and SSL lock to the right of the location bar
+ * Move the identity icon and SSL lock to the end of the address bar, 
+ * move/adjust the 3-dot page action button to make it look better
  *
- * Contributor(s): Madis0, reddit user BatDogOnBatMobile
+ * Contributor(s): Madis0
  */
 
 #urlbar > #identity-box
 {
-  -moz-box-ordinal-group: 2 !important; /* Move identity box to the right */
+  -moz-box-ordinal-group: 99 !important; /* Move identity box to the end */
+  border-inline-end: none !important; /* Remove any right borders from it (internal pages, EV SSL) */
+  margin-inline-end: 0em !important; /* Remove the end margin */
+  margin-inline-start: -0.2em !important; /* Remove the start margin */
 }
 
-#urlbar > #page-action-buttons
-{
-  -moz-box-ordinal-group: 3 !important; /* Move page action buttons more to the right, to keep identity box on the left of them */
+#urlbar > #page-action-buttons > #pageActionButton {
+  -moz-box-ordinal-group: 99 !important; /* Move the 3-dot page action button to the rightmost of page action icons */
+  border-inline-end: 1px solid var(--urlbar-separator-color); /* Add a permanent border (separator) to the right of it */
+  border-image: linear-gradient(transparent 15%, var(--urlbar-separator-color) 15%, var(--urlbar-separator-color) 85%, transparent 85%); /* Separator properties like original */
+  border-image-slice: 1; /* Don't make it full-height */
+}
+
+#pageActionSeparator {
+    visibility: hidden !important; /* Hide the original separator */
 }
 
 .urlbar-input-box
@@ -19,10 +29,3 @@
   margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
 }
 
-/* Fix autocomplete item display */
-#PopupAutoCompleteRichResult .ac-site-icon,
-#PopupAutoCompleteRichResult .ac-type-icon 
-{
-  margin-left: 300em !important;
-  margin-right: -294em !important;
-}
