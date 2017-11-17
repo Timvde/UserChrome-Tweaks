@@ -21,7 +21,7 @@
 }
 
 #pageActionSeparator {
-    visibility: hidden !important; /* Hide the original separator */
+    display: none !important; /* Hide the original separator */
 }
 
 .urlbar-input-box
