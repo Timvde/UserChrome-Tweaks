@@ -17,16 +17,9 @@
 }
 
 #navigator-toolbox {
-  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
   --trigger-area-height: 5px;
-  --extra-height: 2px; /* Not sure where the extra 2px comes from, but is necessary to line up right */
-}
-
-@media (-moz-os-version: windows-win7) {
-  /* Windows 7 has an extra 4px top margin when not maximized */
-  :root[sizemode="normal"] #navigator-toolbox {
-    --tabbar-height: calc(4px + var(--tab-min-height) + var(--space-above-tabbar) - var(--tab-toolbar-navbar-overlap));
-  }
+  --extra-height: 4px; /* Not sure where the extra comes from, but is necessary to line up right */
 }
 
 #toolbar-menubar {
@@ -59,5 +52,5 @@
 :root:not([customizing]) #navigator-toolbox:hover,
 :root:not([customizing]) #navigator-toolbox:focus-within {
   max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
-  margin-bottom: calc(1px - var(--nav-bar-height));
+  margin-bottom: calc(0px - var(--nav-bar-height));
 }
