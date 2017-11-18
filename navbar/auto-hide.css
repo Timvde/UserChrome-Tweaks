@@ -26,6 +26,11 @@
   margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
 }
 
+#nav-bar, #PersonalToolbar {
+	/* Otherwise spacers will not count as hover-able areas */
+    -moz-window-dragging: default;
+}
+
 :root:not([customizing]) #nav-bar
 {
   overflow-y: hidden;
@@ -53,4 +58,14 @@
 :root:not([customizing]) #navigator-toolbox:focus-within {
   max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
   margin-bottom: calc(0px - var(--nav-bar-height));
+}
+
+/* If the bookmarks bar is turned on, auto-hide that too */
+:root:not([customizing]) #PersonalToolbar {
+  visibility: collapse;
+}
+
+:root:not([customizing]) :hover > #PersonalToolbar,
+:root:not([customizing]) #navigator-toolbox:focus-within #PersonalToolbar {
+  visibility: unset;
 }
