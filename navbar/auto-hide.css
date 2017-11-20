@@ -19,7 +19,6 @@
 #navigator-toolbox {
   --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
   --trigger-area-height: 5px;
-  --extra-height: 4px; /* Not sure where the extra comes from, but is necessary to line up right */
 }
 
 #toolbar-menubar {
@@ -49,14 +48,14 @@
 }
 
 :root:not([customizing]) #navigator-toolbox {
-  max-height: calc(var(--tabbar-height) + var(--trigger-area-height) + var(--extra-height));
+  max-height: calc(var(--tabbar-height) + var(--trigger-area-height));
   min-height: var(--tabbar-height);
   margin-bottom: calc(-1 * var(--trigger-area-height));
 }
 
 :root:not([customizing]) #navigator-toolbox:hover,
 :root:not([customizing]) #navigator-toolbox:focus-within {
-  max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
+  max-height: calc(var(--tabbar-height) + var(--nav-bar-height));
   margin-bottom: calc(0px - var(--nav-bar-height));
 }
 
