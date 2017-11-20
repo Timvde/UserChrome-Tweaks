@@ -25,6 +25,13 @@
   margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
 }
 
+/* Undo add of 4px extra margin on top of the tabs toolbar on Windows 7. */
+/* Note: @media -moz-os-version does not work in userChrome.css (https://bugzilla.mozilla.org/show_bug.cgi?id=1418963) */
+:root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar,
+:root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar {
+  padding-top: var(--space-above-tabbar) !important;
+}
+
 #nav-bar, #PersonalToolbar {
 	/* Otherwise spacers will not count as hover-able areas */
     -moz-window-dragging: default;
@@ -61,10 +68,14 @@
 
 /* If the bookmarks bar is turned on, auto-hide that too */
 :root:not([customizing]) #PersonalToolbar {
-  visibility: collapse;
+  max-height: 0 !important;
+  min-height: 0.1px !important;
+  opacity: 0;
+  transition: opacity 0.15s ease-in !important;
 }
 
 :root:not([customizing]) :hover > #PersonalToolbar,
 :root:not([customizing]) #navigator-toolbox:focus-within #PersonalToolbar {
-  visibility: unset;
+  max-height: 4em !important;
+  opacity: 1;
 }
