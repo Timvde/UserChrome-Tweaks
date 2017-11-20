@@ -1,0 +1,40 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ * This style will hide the tab bar and merge the title bar with the navigation bar. For Windows
+ * Make sure "Title Bar" is unchecked in customize menu.
+ *
+ * Contributor(s): Ivan0xFF
+ */
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+#titlebar-buttonbox {
+  height: 40px !important;
+}
+
+#nav-bar {
+  margin-top: -40px;
+  margin-right: 140px;
+  box-shadow: none !important;
+}
+
+[uidensity="compact"]:root #titlebar-buttonbox {
+  height: 32px !important;
+}
+
+[uidensity="compact"]:root #nav-bar {
+  margin-top: -32px;
+}
+
+#titlebar-spacer {
+  background-color: var(--chrome-secondary-background-color);
+}
+
+#titlebar-buttonbox-container {
+  background-color: var(--chrome-secondary-background-color);
+}
