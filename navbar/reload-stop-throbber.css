@@ -1,0 +1,13 @@
+/*
+ * Shows the tab throbber instead of the stop button while the page loads. Hover will change it back to stop button.
+ *
+ * Contributor(s): Madis0
+ */
+
+#stop-reload-button:not([animate]) > #stop-button {
+    list-style-image: url("chrome://browser/skin/tabbrowser/tab-loading.png") !important; /* Show throbber after the reload-to-stop animation, until stop-to-reload animation */
+}
+
+#stop-reload-button > #stop-button:hover {
+  list-style-image: url("chrome://browser/skin/stop.svg") !important; /* Show stop button on hover */
+}
