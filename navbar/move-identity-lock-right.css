@@ -20,4 +20,4 @@
 .urlbar-input-box
 {
   margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
-}
+} /* If you're using reload-button-addressbar-left.css, set the value to 2em. */
