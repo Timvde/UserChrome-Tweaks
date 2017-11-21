@@ -6,11 +6,11 @@
  */
 
 #stop-reload-button {
-	transform: translate(0.4em); /* Makes the reload button "float" 0.3 em to the right */
+  transform: translate(0.4em); /* Makes the reload button "float" 0.3 em to the right */
 }
 
 #urlbar-container {
-	margin-left: -1.95em; /* Makes the address bar "move" under reload button to the left */
+  margin-left: -1.95em; /* Makes the address bar "move" under reload button to the left */
 }
 
 #identity-box {
