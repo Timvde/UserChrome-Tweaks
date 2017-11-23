@@ -21,6 +21,10 @@
   --trigger-area-height: 5px;
 }
 
+:root[chromehidden~="toolbar"] #navigator-toolbox {
+  --tabbar-height: 0.1px;
+}
+
 #toolbar-menubar {
   margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
 }
