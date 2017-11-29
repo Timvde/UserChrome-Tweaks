@@ -5,6 +5,7 @@
  * Video: https://vimeo.com/240436456
  *
  * Contributor(s): https://www.reddit.com/user/AJtfM7zT4tJdaZsm and Andrei Cristian Petcu
+ *                 https://www.reddit.com/r/FirefoxCSS/comments/7evwow/show_bookmarks_toolbar_only_on_new_tab/
  */
 
 #main-window #PersonalToolbar {
@@ -13,6 +14,8 @@
 
 #main-window[title^="about:newtab"] #PersonalToolbar,
 #main-window[title^="New Tab"] #PersonalToolbar,
-#main-window[title^="Nightly"] #PersonalToolbar {
+#main-window[title^="Nightly"] #PersonalToolbar,
+#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+#main-window[title^="Firefox"] #PersonalToolbar {
   visibility: visible !important;
 }
