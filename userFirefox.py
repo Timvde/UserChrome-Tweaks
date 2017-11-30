@@ -251,17 +251,20 @@ class LayoutBox(QVBoxLayout):
 					elif self.backupChrome.result() == 65536: #no
 						logging.debug("Not backing up userChome")
 				# Load existing settings
-				with open(self.profilePath + "/chrome/userFirefox.json") as uFP:
-					savedTweaks = json.load(uFP)
-				logging.debug("Loaded json settings: %s", savedTweaks)
-				for loadedTweak in savedTweaks:
-					logging.debug("Loaded tweak. check: %i, category: %s, name: %s", loadedTweak["Enabled"], loadedTweak["Category"], loadedTweak["Name"])
-					tweakCat = loadedTweak["Category"]
-					tweakName = loadedTweak["Name"]
-					self.filesBox.tweaksAdded[tweakCat + tweakName] = QTreeWidgetItem(self.filesBox.selectedTweaks)
-					self.filesBox.tweaksAdded[tweakCat + tweakName].setCheckState(0, loadedTweak["Enabled"])
-					self.filesBox.tweaksAdded[tweakCat + tweakName].setText(1, tweakCat)
-					self.filesBox.tweaksAdded[tweakCat + tweakName].setText(2, tweakName)
+				try:
+					with open(self.profilePath + "/chrome/userFirefox.json") as uFP:
+						savedTweaks = json.load(uFP)
+					logging.debug("Loaded json settings: %s", savedTweaks)
+					for loadedTweak in savedTweaks:
+						logging.debug("Loaded tweak. check: %i, category: %s, name: %s", loadedTweak["Enabled"], loadedTweak["Category"], loadedTweak["Name"])
+						tweakCat = loadedTweak["Category"]
+						tweakName = loadedTweak["Name"]
+						self.filesBox.tweaksAdded[tweakCat + tweakName] = QTreeWidgetItem(self.filesBox.selectedTweaks)
+						self.filesBox.tweaksAdded[tweakCat + tweakName].setCheckState(0, loadedTweak["Enabled"])
+						self.filesBox.tweaksAdded[tweakCat + tweakName].setText(1, tweakCat)
+						self.filesBox.tweaksAdded[tweakCat + tweakName].setText(2, tweakName)
+				except FileNotFoundError:
+					pass
 				self.filesBox.resizeColumns()
 			else:
 				self.noProfile = QMessageBox()
