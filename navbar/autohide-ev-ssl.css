@@ -1,0 +1,13 @@
+/*
+ * Hides the website name (when present) from the address bar, keeping only the location abbrevation.
+ *
+ * Contributor(s): Madis0
+ */
+
+#identity-icon-label { /* Hides the EV SSL label */
+  visibility: collapse !important;
+}
+
+#identity-box:hover > #identity-icon-labels > #identity-icon-label { /* Shows the label on identity box hover */
+  visibility: visible !important;
+}
