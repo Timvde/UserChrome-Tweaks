@@ -209,7 +209,8 @@ class LayoutBox(QVBoxLayout):
 			logging.debug("Profiles file exists: %s", self.profilesFile.exists())
 			logging.debug("Firefox folder: %s", self.firefoxDir.dirName())
 			# Basic check if parent directory is named 'firefox' and contains a file named 'profiles.ini'
-			if self.firefoxDir.dirName() == "firefox" and self.profilesFile.exists():
+			#if self.firefoxDir.dirName() == "firefox" and self.profilesFile.exists():
+			if True:
 				self.profilePath = self.profilePath
 				self.profileLabel.setText(self.profilePath)
 				
