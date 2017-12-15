@@ -83,3 +83,26 @@
   max-height: 4em !important;
   opacity: 1;
 }
+
+/* Lightweight Theme Support */
+:root:-moz-lwtheme #nav-bar, 
+:root:-moz-lwtheme #PersonalToolbar {
+  background-color: var(--lwt-accent-color) !important;
+  background-image: var(--lwt-header-image), var(--lwt-additional-images) !important;
+  background-position: var(--lwt-background-alignment) !important;
+  background-repeat: var(--lwt-background-tiling) !important;
+}
+
+#main-window[sizemode="normal"]:-moz-lwtheme #nav-bar {
+    background-position-y: calc(-2px - var(--tabbar-height)) !important;
+}
+#main-window[sizemode="normal"]:-moz-lwtheme #PersonalToolbar {
+    background-position-y: calc(-2px - var(--tabbar-height) - var(--nav-bar-height)) !important;
+}
+
+#main-window[sizemode="maximized"]:-moz-lwtheme #nav-bar {
+    background-position-y: calc(-8px - var(--tabbar-height)) !important;
+}
+#main-window[sizemode="maximized"]:-moz-lwtheme #PersonalToolbar {
+    background-position-y: calc(-8px - var(--tabbar-height) - var(--nav-bar-height)) !important;
+}
