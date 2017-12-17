@@ -1,26 +1,23 @@
 /*
- * Move the identity icon and SSL lock to the right of the location bar
+ * Move the identity icon and SSL lock to the end of the address bar, 
+ * move/adjust the 3-dot page action button to make it look better
  *
  * Contributor(s): Madis0
  */
 
-#identity-box
+#urlbar > #identity-box
 {
-  -moz-box-ordinal-group: 5 !important;
+  -moz-box-ordinal-group: 99 !important; /* Move identity box to the end */
+  border-inline-end: none !important; /* Remove any right borders from it (internal pages, EV SSL) */
+  margin-inline-end: 0em !important; /* Remove the end margin */
+  margin-inline-start: -0.2em !important; /* Remove the start margin */
 }
 
-.urlbar-input
-{
-  margin-left: 0.3em !important;
+#urlbar > #page-action-buttons > #pageActionButton {
+  -moz-box-ordinal-group: 99 !important; /* Move the 3-dot page action button to the rightmost of page action icons */
 }
 
-#PopupAutoCompleteRichResult .ac-site-icon
+.urlbar-input-box
 {
-  margin-left: 10px !important;
-  margin-right: 10px !important;
-}
-
-#PopupAutoCompleteRichResult .ac-type-icon
-{
-  margin-left: 10px !important;
-}
+  margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
+} /* If you're using reload-button-addressbar-left.css, set the value to 2em. */
