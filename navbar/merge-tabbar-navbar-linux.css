@@ -1,0 +1,68 @@
+/*
+ * Place the navigation bar in the front of the tab bar (Linux)
+ *
+ * Contributor(s): Madis0
+ */
+
+/* Variable values depending on layout. Use these to customize style. */
+
+/* Compact density */
+:root[uidensity=compact] {
+  --tabs-margin-left: 5.5em; /* Keep margin for button background */
+  --space-before-tabs: 34.5em; /* Left margin for nav bar */
+  --space-after-tabs: 2em; /* Right margin for caption button, menu */
+}
+
+/* Touch density */
+:root[uidensity=touch] {
+  --tabs-margin-left: 7.5em; /* Keep margin for button background */
+  --space-before-tabs: 34em; /* Left margin for nav bar */
+  --space-after-tabs: 2.3em; /* Right margin for caption button, menu */
+}
+
+/* Normal density */
+:root {
+  --tabs-margin-left: 6.4em; /* Keep margin for button background */
+  --space-before-tabs: 34em; /* Left margin for nav bar */
+  --space-after-tabs: 2em; /* Right margin for caption button, menu */
+}
+
+/* Static values only depending on touch density */
+:root[uidensity=compact] {
+  --nav-margin-top: -1.9em;
+  --menu-margin-top: 0.05em;
+}
+
+:root[uidensity=touch] {
+  --nav-margin-top: -2.3em;
+  --menu-margin-top: 0.1em;
+}
+
+:root {
+  --nav-margin-top: -2.1em;
+  --menu-margin-top: 0.15em;
+}
+
+/* Adjust tab bar to get space first */
+#TabsToolbar {
+  margin-left: var(--tabs-margin-left) !important;
+  padding-left: var(--space-before-tabs) !important;
+  margin-right: var(--space-after-tabs) !important;
+  margin-bottom: -0.1em; !important; /* Remove bottom border */
+}
+
+/* Move nav bar to top left */
+#nav-bar {
+  margin-top: var(--nav-margin-top) !important; /* Move nav bar up */
+  margin-right: 60vw !important; /* Cut it off with defined width */
+  margin-bottom: -0.1em !important; /* Remove bottom border */
+  background-color: transparent !important; /* Make it use tab bar colors */
+}
+
+/* Move menu button to top right */
+#PanelUI-button {
+  position: fixed; /* Fixed position for menu */
+  top: var(--menu-margin-top); /* Add some margin to top */
+  right: 0em; /* Move it to right side (adjust for caption buttons) */
+  border-left: none !important; /* Remove menu border */
+}
