@@ -1,0 +1,26 @@
+/*
+ * Highlights the address bar in red when it has a broken padlock (HTTP login, mixed scripts enabled etc.)
+ *
+ * Contributor(s): Madis0, throwaway_3r in reddit and paltus in mozillazine
+ * https://www.reddit.com/r/FirefoxCSS/comments/7dkhuh/color_your_url_bar_based_on_website_security/
+ * http://forums.mozillazine.org/viewtopic.php?p=14404121#p14404121
+ */
+
+#urlbar {
+  position: relative;
+  z-index: 1;
+}
+
+#identity-box:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
+  background: red;
+}
