@@ -1,0 +1,10 @@
+/*
+ * Replaces the insecure site broken padlock with the error symbol used for extensions that are incompatible with e10s.
+ *
+ * Contributor(s): Madis0
+ */
+
+#urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms > #connection-icon
+{
+  list-style-image: url("chrome://mozapps/skin/extensions/alerticon-error.svg") !important; 
+}
