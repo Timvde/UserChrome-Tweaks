@@ -6,6 +6,34 @@
  * Contributor(s): Gacel Perfinian
  */
 
-.titlebar-placeholder[type="pre-tabs"], .titlebar-placeholder[type="post-tabs"] {
+/*
+ * Instead of hiding the padding, you can adjust the padding.
+ * As of Firefox Quantum, it is set at around 40 pixels
+ * (the exact amount depends on the specific theming done and
+ * the operating system).
+ * To override, instead of placing display:none
+ * use width: Xpx !important;
+ * or width: Xem !important;
+ */
+
+.titlebar-placeholder[type="pre-tabs"] {
   display:none !important;
 }
+
+/* Unless you have a specific problem
+ * (for example, having a very small screen)
+ * this should be left as-is. Only uncomment
+ * it when the benefit is better than the side effects.
+ * Reported side effects including undraggable windows
+ * and lost new tab button.
+ * Note that if your display is RTL, the above code should
+ * still work.
+ */
+
+/*
+
+.titlebar-placeholder[type="post-tabs"] {
+  display:none !important;
+}
+
+*/
