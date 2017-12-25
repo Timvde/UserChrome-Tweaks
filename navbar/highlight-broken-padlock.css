@@ -1,0 +1,11 @@
+/*
+ * Highlights the broken padlock icon by applying an additional red background to it, similar to Vivaldi.
+ *
+ * Contributor(s): Madis0
+ */
+
+#urlbar[pageproxystate="valid"] > #identity-box.notSecure > #connection-icon,
+#urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms > #connection-icon,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent > #connection-icon {
+  background: red !important;
+}
