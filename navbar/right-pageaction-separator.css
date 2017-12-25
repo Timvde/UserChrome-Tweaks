@@ -1,6 +1,9 @@
 /*
  * Creates a separator to the right side of the PageAction menu button.
  * It is recommended to hide the original too and place something to the right of the menu to make the separator actually useful.
+ * For example, these styles work well:
+ * https://github.com/Timvde/UserChrome-Tweaks/blob/master/navbar/move-identity-lock-right.css
+ * https://github.com/Timvde/UserChrome-Tweaks/blob/master/navbar/hide-pageaction-separator.css
  *
  * Contributor(s): Madis0
  */
