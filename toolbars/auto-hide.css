@@ -1,0 +1,108 @@
+/*
+ * Auto-hide the URL-bar and bookmarks bar, show on hover or focus
+ *
+ * Contributor(s): Alex Vallat
+ */
+
+:root[uidensity=compact] #navigator-toolbox {
+  --nav-bar-height: 33px;
+}
+
+:root:not([uidensity]) #navigator-toolbox {
+  --nav-bar-height: 39px;
+}
+
+:root[uidensity=touch] #navigator-toolbox {
+  --nav-bar-height: 41px;
+}
+
+#navigator-toolbox {
+  --tabbar-height: calc(var(--tab-min-height) + var(--space-above-tabbar));
+  --trigger-area-height: 5px;
+}
+
+:root[chromehidden~="toolbar"] #navigator-toolbox {
+  --tabbar-height: 0.1px;
+}
+
+#toolbar-menubar {
+  margin-top: 0px !important; /* This is usually 0, but under Win7 can be given an extra 1px when not maximized */
+}
+
+/* Undo add of 4px extra margin on top of the tabs toolbar on Windows 7. */
+/* Note: @media -moz-os-version does not work in userChrome.css (https://bugzilla.mozilla.org/show_bug.cgi?id=1418963) */
+:root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar,
+:root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar {
+  padding-top: var(--space-above-tabbar) !important;
+}
+
+#nav-bar, #PersonalToolbar {
+	/* Otherwise spacers will not count as hover-able areas */
+    -moz-window-dragging: default;
+}
+
+:root:not([customizing]) #nav-bar
+{
+  overflow-y: hidden;
+  max-height:0;
+  min-height:0 !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+  opacity: 0;
+}
+
+:root:not([customizing]) :hover > #nav-bar,
+:root:not([customizing]) #nav-bar:focus-within {
+  max-height: var(--nav-bar-height);
+  opacity: 1;
+  transition: opacity 0.15s ease-in, max-height 0.15s linear;
+}
+
+:root:not([customizing]) #navigator-toolbox {
+  max-height: calc(var(--tabbar-height) + var(--trigger-area-height));
+  min-height: var(--tabbar-height);
+  margin-bottom: calc(-1 * var(--trigger-area-height));
+}
+
+:root:not([customizing]) #navigator-toolbox:hover,
+:root:not([customizing]) #navigator-toolbox:focus-within {
+  max-height: calc(var(--tabbar-height) + var(--nav-bar-height));
+  margin-bottom: calc(0px - var(--nav-bar-height));
+}
+
+/* If the bookmarks bar is turned on, auto-hide that too */
+:root:not([customizing]) #PersonalToolbar {
+  max-height: 0 !important;
+  min-height: 0.1px !important;
+  opacity: 0;
+  transition: opacity 0.15s ease-in !important;
+}
+
+:root:not([customizing]) :hover > #PersonalToolbar,
+:root:not([customizing]) #navigator-toolbox:focus-within #PersonalToolbar {
+  max-height: 4em !important;
+  opacity: 1;
+}
+
+/* Lightweight Theme Support */
+:root:-moz-lwtheme #nav-bar, 
+:root:-moz-lwtheme #PersonalToolbar {
+  background-color: var(--lwt-accent-color) !important;
+  background-image: var(--lwt-header-image), var(--lwt-additional-images) !important;
+  background-position: var(--lwt-background-alignment) !important;
+  background-repeat: var(--lwt-background-tiling) !important;
+}
+
+#main-window[sizemode="normal"]:-moz-lwtheme #nav-bar {
+    background-position-y: calc(-2px - var(--tabbar-height)) !important;
+}
+#main-window[sizemode="normal"]:-moz-lwtheme #PersonalToolbar {
+    background-position-y: calc(-2px - var(--tabbar-height) - var(--nav-bar-height)) !important;
+}
+
+#main-window[sizemode="maximized"]:-moz-lwtheme #nav-bar {
+    background-position-y: calc(-8px - var(--tabbar-height)) !important;
+}
+#main-window[sizemode="maximized"]:-moz-lwtheme #PersonalToolbar {
+    background-position-y: calc(-8px - var(--tabbar-height) - var(--nav-bar-height)) !important;
+}
