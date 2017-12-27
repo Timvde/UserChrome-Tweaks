@@ -21,6 +21,8 @@
   z-index: -1;
 }
 
-#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
+#urlbar[pageproxystate="valid"] > #identity-box.notSecure:after,
+#urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms:after,
+#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent:after {
   background: red;
 }
