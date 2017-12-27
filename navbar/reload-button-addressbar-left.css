@@ -1,6 +1,7 @@
 /*
  * Moves the reload button inside the address bar, on the left. 
  * Requires placing the reload button directly to the left of the address bar.
+ * For better looks across platforms you may need to adjust the margins a bit.
  * Contributor(s): Madis0, Admicos
  * https://github.com/Timvde/UserChrome-Tweaks/pull/47
  */
