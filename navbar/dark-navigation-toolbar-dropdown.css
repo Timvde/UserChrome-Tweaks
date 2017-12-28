@@ -1,0 +1,23 @@
+/*
+ * Description: Extends the dark theme to the navigation toolbar dropdown (autocomplete popup).
+ *
+ * Contributor(s): hyperfekt
+ */
+ 
+#PopupAutoCompleteRichResult {
+  background-image: none !important;
+  background-color: var(--url-and-searchbar-background-color) !important;
+  --panel-separator-color: rgb(146, 146, 146) !important;
+}
+
+.search-panel-header, .search-panel-one-offs {
+  background-color: var(--chrome-secondary-background-color) !important;
+}
+
+richlistbox, .search-panel-input-value {
+  color: var(--lwt-text-color) !important;
+}
+
+.ac-separator:not([selected="true"]), .ac-url:not([selected="true"]), .ac-action:not([selected="true"]) {
+    color: hsl(211, 100%, 65%) !important;
+}
