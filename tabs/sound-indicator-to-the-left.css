@@ -10,7 +10,6 @@
 .tab-icon-sound {
   -moz-box-ordinal-group: 0 !important;
   border-radius: 50% !important;
-  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio") !important;
   margin: initial !important;
   margin-right: -16px !important;
   opacity: 1 !important;
@@ -18,13 +17,33 @@
 }
 
 .tab-icon-sound:hover {
-  background-color: white !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+.tab-close-button {
+  -moz-box-ordinal-group: 2 !important;
+}
+
+.tab-icon-sound[soundplaying] {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio") !important;
 }
 
 .tab-icon-sound[muted] {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-muted") !important;
 }
 
-.tab-close-button {
-  -moz-box-ordinal-group: 2 !important;
+.tab-icon-sound[activemedia-blocked] {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-blocked") !important;
+}
+
+.tab-icon-sound[soundplaying]:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white") !important;
+}
+
+.tab-icon-sound[muted]:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white-muted") !important;
+}
+
+.tab-icon-sound[activemedia-blocked]:-moz-lwtheme-brighttext {
+  list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white-blocked") !important;
 }
