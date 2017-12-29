@@ -1,0 +1,13 @@
+/*
+ * Description: Hides the Tracking Protection icon.
+ *
+ * Contributor: Joachim Vandersmissen
+ */
+
+#tracking-protection-icon {
+  visibility: collapse !important;
+}
+
+#identity-box:hover > #tracking-protection-icon {
+  visibility: visible !important;
+}
