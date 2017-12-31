@@ -8,7 +8,7 @@
 #widget-overflow-fixed-list {
     display: grid; /* Display icons in a grid */
     grid-template-rows: repeat(1, 1.5em); /* One row with button width 1.5em */
-    grid-template-columns: repeat(20, 1.5em); /* Ten columns with button height 1.5em */
+    grid-template-columns: repeat(20, 1.5em); /* Twenty columns with button height 1.5em */
 }
 
 #widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text {
