@@ -2,8 +2,12 @@
  * Move the identity icon and SSL lock to the end of the address bar, 
  * move/adjust the 3-dot page action button to make it look better
  *
- * Contributor(s): Madis0
+ * Contributor(s): Madis0, Mart3323
  */
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+  padding-inline-start: var(--item-padding-end);
+}
 
 #urlbar > #identity-box
 {
