@@ -6,7 +6,7 @@
  */
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem {
-  padding-inline-start: var(--item-padding-end);
+  padding-inline-start: var(--item-padding-end) !important;
 }
 
 #urlbar > #identity-box
