@@ -18,3 +18,14 @@
   margin: var(--newtab-margin) !important;
 }
 
+[uidensity="compact"]:root #TabsToolbar > .toolbarbutton-1 {
+  margin-bottom: 0 !important;
+  max-height: var(--tab-min-height) !important;
+  
+}
+
+[uidensity="compact"]:root #TabsToolbar > .toolbarbutton-1 > .toolbarbutton-badge-stack,
+[uidensity="compact"]:root #TabsToolbar > .toolbarbutton-1 .toolbarbutton-icon{
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
