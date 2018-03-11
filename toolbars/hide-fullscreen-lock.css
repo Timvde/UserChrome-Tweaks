@@ -1,0 +1,10 @@
+/*
+ * Hides the HTML5 full screen popup lock icon for secure pages. You can test this on https://permission.site
+ *
+ * Contributor(s): Madis0
+ */
+
+*.pointerlockfswarning[data-identity="verifiedIdentity"]::before,
+*.pointerlockfswarning[data-identity="verifiedDomain"]::before {
+  display: none !important;
+}
