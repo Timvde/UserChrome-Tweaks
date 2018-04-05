@@ -8,37 +8,37 @@
  */
 
 #sidebar {
-    max-width: none!important;
-    min-width: 0!important
+  max-width: none!important;
+  min-width: 0!important
 }
 
 #sidebar-box+#sidebar-splitter {
-    display: none!important
+  display: none!important
 }
 
 #sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-header {
-    visibility: collapse
+  visibility: collapse
 }
 
 :root {
-    --thin-tab-width: 35px;
-    --wide-tab-width: 280px
+  --thin-tab-width: 35px;
+  --wide-tab-width: 280px
 }
 
 #sidebar-box {
-    overflow: hidden!important;
-    position: relative!important;
-    transition: all 100ms!important;
-    min-width: var(--thin-tab-width)!important;
-    max-width: var(--thin-tab-width)!important
+  overflow: hidden!important;
+  position: relative!important;
+  transition: all 100ms!important;
+  min-width: var(--thin-tab-width)!important;
+  max-width: var(--thin-tab-width)!important
 }
 
 #sidebar-box #sidebar,#sidebar-box:hover {
-    transition: all 100ms!important;
-    min-width: var(--wide-tab-width)!important;
-    max-width: var(--wide-tab-width)!important
+  transition: all 100ms!important;
+  min-width: var(--wide-tab-width)!important;
+  max-width: var(--wide-tab-width)!important
 }
 
 #sidebar-box:hover {
-    margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important
 }
