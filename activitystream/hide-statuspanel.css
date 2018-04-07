@@ -1,0 +1,17 @@
+/*
+ * Description: Hide the status panel at the bottom of the browser which shows the current activity. As it is too fast to read anyway. Makes the browser look much nicer.
+ *
+ * Contributor(s): Amar Singh, source https://support.mozilla.org/en-US/questions/976248
+ */
+
+/* Disable statuspanel completely */
+statuspanel {
+  display: none !important;
+}
+
+/* Disable messages selectively */
+statuspanel[type="overLink"] .statuspanel-label
+statuspanel[type="status"] .statuspanel-label[value^="Looking"]
+statuspanel[type="status"] .statuspanel-label[value^="Connect"]
+statuspanel[type="status"] .statuspanel-label[value^="Waiting"]
+statuspanel[type="status"] .statuspanel-label[value^="Transfer"]
