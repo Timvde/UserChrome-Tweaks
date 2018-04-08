@@ -7,3 +7,7 @@
 #sidebar-box {
   -moz-box-direction: reverse;
 }
+
+#sidebar-switcher-arrow {
+  transform: rotate(180deg);
+}
