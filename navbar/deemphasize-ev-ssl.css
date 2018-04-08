@@ -1,0 +1,11 @@
+/*
+ * Makes the website name (when present) of certificate appear in black, normal-styled text 
+ * like seen in built-in and extension pages. Goes well with hide-ssl-lock.css
+ *
+ * Contributor(s): Madis0
+ */
+
+#urlbar > #identity-box.verifiedIdentity > #identity-icon-labels > #identity-icon-label,
+#urlbar > #identity-box.verifiedIdentity > #identity-icon-labels > #identity-icon-country-label {
+  color: rgba(38, 50, 56, 0.867) !important;
+}
