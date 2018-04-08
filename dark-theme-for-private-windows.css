@@ -1,0 +1,26 @@
+/*
+ * Description: Apply dark theme to toolbars (nav, tabs, and bookmarks) for private windows.
+ *
+ * Screenshot:n/a
+ *
+ * Contributor(s): David Twist https://github.com/dtwist
+ */
+
+:root[privatebrowsingmode=temporary] {
+  /* Chrome */
+  --chrome-background-color: hsl(240, 5%, 5%) !important;
+  --chrome-color: rgb(249, 249, 250) !important;
+  --chrome-secondary-background-color: hsl(240, 1%, 20%) !important;
+  --toolbox-border-bottom-color: hsla(240, 5%, 5%, .1) !important;
+  --chrome-nav-bar-separator-color: rgba(0,0,0,.2) !important;
+  --chrome-nav-buttons-background: hsla(240, 5%, 5%, .1) !important;
+  --chrome-nav-buttons-hover-background: hsla(240, 5%, 5%, .15) !important;
+  --chrome-nav-bar-controls-border-color: hsla(240, 5%, 5%, .3) !important;
+  --chrome-selection-color: #fff !important;
+  --chrome-selection-background-color: #5675B9 !important;
+
+  /* Url and search bars */
+  --url-and-searchbar-background-color: rgb(71, 71, 73) !important;
+  --url-and-searchbar-color: var(--chrome-color) !important;
+  --urlbar-separator-color: #5F6670 !important;
+}
