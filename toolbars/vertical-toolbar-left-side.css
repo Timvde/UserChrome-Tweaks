@@ -7,6 +7,16 @@
  * Contributor(s): erlotinib
  */
 
+:root {
+  /* The space between the top of the window and
+   * the beginning of the toolbar may change 
+   * between OS/density/...
+   * This variable may need to be adjusted in 
+   * order to have the bar at the right place
+   */
+  --space-from-top-of-window: 80px;
+}
+
 /* ---------------- */
 /*
  * Code from Faviconized Bookmarks from Okamoi
@@ -47,7 +57,7 @@
    * We place the toolbar below the url-bar and menu bar
    * 0 is the top of firefox's interface 
    */
-  top: 80px!important;
+  top: var(--space-from-top-of-window)!important;
   left:35px;
   height: 35px!important;
   width: 100%!important;
