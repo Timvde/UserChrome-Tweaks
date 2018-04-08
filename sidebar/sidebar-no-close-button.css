@@ -1,0 +1,9 @@
+/*
+ * This style will hide the sidebar close button
+ *
+ * Contributor(s): Dmitry Sergeenkov
+ */
+
+#sidebar-close {
+  visibility: collapse;
+}
