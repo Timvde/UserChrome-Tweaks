@@ -1,0 +1,12 @@
+/*
+ * Makes the Not Secure text of HTTP pages appear in red text. 
+ * The label itself can be enabled by setting
+ * security.insecure_connection_text.enabled to true in about:config on Firefox 60+.
+ *
+ * Contributor(s): Madis0
+ */
+
+
+#urlbar > #identity-box.notSecureText > #identity-icon-labels > #identity-icon-label {
+  color: rgba(255, 0, 0, 0.867) !important;
+}
