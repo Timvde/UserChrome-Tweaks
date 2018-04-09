@@ -1,0 +1,15 @@
+/*
+ * Removes big, generic icons from categories in the page info popup, in order to make it look cleaner like Chrome and Edge.
+ * Does not affect the page info window, which is accessible from security section arrow > More info and page right click menu.
+ *
+ * Contributor(s): Madis0
+ */
+ 
+ .identity-popup-security-content, #identity-popup-permissions-content, #tracking-protection-content {
+   background-image: none !important; /* Remove big icons */
+   padding-inline-start: 1em !important; /* Normalize padding */
+}
+
+.identity-popup-permission-item {
+   padding-inline-start: 2.2em !important; /* Add padding to permission items in order to make their icons visible */
+}
