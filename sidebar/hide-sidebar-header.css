@@ -4,9 +4,18 @@
  * so make sure you have some other way of doing so if you need to.
  * (For example, an extension can add a toolbar button which opens its sidebar pane.)
  *
- * Contributor(s): Chris Morgan
+ * Contributor(s): Chris Morgan, TanzNukeTerror
  */
 
 #sidebar-header {
   display: none;
 }
+
+/* 
+ * For TST users; Disables the sidebar header just for TreeStyleTabs sidebar.
+ */
+#sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-header {
+      visibility: collapse
+    }
+
+

@@ -4,12 +4,12 @@
  * Contributor(s): Amar Singh, source https://support.mozilla.org/en-US/questions/976248
  */
 
-/* Disable statuspanel completely */
+/* Disable statuspanel completely, remove this if you want to keep the statuspanel */
 statuspanel {
   display: none !important;
 }
 
-/* Disable messages selectively */
+/* Alternatively, you can disable status panel messages selectively */
 statuspanel[type="overLink"] .statuspanel-label
 statuspanel[type="status"] .statuspanel-label[value^="Looking"]
 statuspanel[type="status"] .statuspanel-label[value^="Connect"]

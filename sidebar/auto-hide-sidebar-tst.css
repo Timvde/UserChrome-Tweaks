@@ -16,10 +16,6 @@
   display: none!important
 }
 
-#sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-header {
-  visibility: collapse
-}
-
 :root {
   --thin-tab-width: 35px;
   --wide-tab-width: 280px
