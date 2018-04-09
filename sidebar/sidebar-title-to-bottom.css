@@ -1,0 +1,13 @@
+/*
+ * This style moves sidebar header to the bottom
+ *
+ * Contributor(s): Dmitry Sergeenkov
+ */
+
+#sidebar-box {
+  -moz-box-direction: reverse;
+}
+
+#sidebar-switcher-arrow {
+  transform: rotate(180deg);
+}
