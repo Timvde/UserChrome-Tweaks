@@ -15,7 +15,7 @@
  * For TST users; Disables the sidebar header just for TreeStyleTabs sidebar.
  */
 #sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-header {
-      visibility: collapse
-    }
+  visibility: collapse;
+}
 
 

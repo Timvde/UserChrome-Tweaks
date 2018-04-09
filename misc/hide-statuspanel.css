@@ -11,7 +11,9 @@ statuspanel {
 
 /* Alternatively, you can disable status panel messages selectively */
 statuspanel[type="overLink"] .statuspanel-label
-statuspanel[type="status"] .statuspanel-label[value^="Looking"]
-statuspanel[type="status"] .statuspanel-label[value^="Connect"]
-statuspanel[type="status"] .statuspanel-label[value^="Waiting"]
-statuspanel[type="status"] .statuspanel-label[value^="Transfer"]
++ statuspanel[type="status"] .statuspanel-label[value^="Looking"]
++ statuspanel[type="status"] .statuspanel-label[value^="Connect"]
++ statuspanel[type="status"] .statuspanel-label[value^="Waiting"]
++ statuspanel[type="status"] .statuspanel-label[value^="Transfer"] {
+  display: none !important;
+}

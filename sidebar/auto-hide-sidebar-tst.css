@@ -9,16 +9,16 @@
 
 #sidebar {
   max-width: none!important;
-  min-width: 0!important
+  min-width: 0!important;
 }
 
 #sidebar-box+#sidebar-splitter {
-  display: none!important
+  display: none!important;
 }
 
 :root {
   --thin-tab-width: 35px;
-  --wide-tab-width: 280px
+  --wide-tab-width: 280px;
 }
 
 #sidebar-box {
@@ -26,15 +26,15 @@
   position: relative!important;
   transition: all 100ms!important;
   min-width: var(--thin-tab-width)!important;
-  max-width: var(--thin-tab-width)!important
+  max-width: var(--thin-tab-width)!important;
 }
 
 #sidebar-box #sidebar,#sidebar-box:hover {
   transition: all 100ms!important;
   min-width: var(--wide-tab-width)!important;
-  max-width: var(--wide-tab-width)!important
+  max-width: var(--wide-tab-width)!important;
 }
 
 #sidebar-box:hover {
-  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important;
 }
