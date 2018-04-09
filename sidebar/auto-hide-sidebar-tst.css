@@ -35,6 +35,7 @@
   max-width: var(--wide-tab-width)!important;
 }
 
+/* For right sidebar change 'margin-right' to 'margin-left' */
 #sidebar-box:hover {
   margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important;
 }
