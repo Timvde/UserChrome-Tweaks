@@ -48,7 +48,7 @@
   margin-left: var(--tabs-margin-left) !important;
   padding-left: var(--space-before-tabs) !important;
   margin-right: var(--space-after-tabs) !important;
-  margin-bottom: -0.1em; !important; /* Remove bottom border */
+  margin-bottom: -0.1em !important; /* Remove bottom border */
 }
 
 /* Move nav bar to top left */
