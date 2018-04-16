@@ -9,7 +9,9 @@ statuspanel {
   display: none !important;
 }
 
-/* Alternatively, you can disable status panel messages selectively */
+/*
+ * Alternatively, you can disable status panel messages selectively
+ *
 statuspanel[type="overLink"] .statuspanel-label
 ,statuspanel[type="status"] .statuspanel-label[value^="Looking"]
 ,statuspanel[type="status"] .statuspanel-label[value^="Connect"]
@@ -17,3 +19,4 @@ statuspanel[type="overLink"] .statuspanel-label
 ,statuspanel[type="status"] .statuspanel-label[value^="Transfer"] {
   display: none !important;
 }
+*/
