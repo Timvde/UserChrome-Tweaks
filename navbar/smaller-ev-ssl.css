@@ -1,0 +1,10 @@
+/*
+ * Makes the website name (when present) of certificate have a smaller font in order to make it fit
+ * more text and appear separate from the URL, similar to Vivaldi. Goes well with deemphasize-ev-ssl.css
+ *
+ * Contributor(s): Madis0
+ */
+
+#identity-icon-label, #identity-icon-country-label {
+  font-size: 12px !important;
+}
