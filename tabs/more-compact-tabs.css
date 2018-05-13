@@ -10,6 +10,10 @@
   --newtab-margin: -3px 0 -3px -3px !important;
 }
 
+:root[uidensity="compact"] #tabbrowser-tabs {
+  --tab-min-height: var(--tab-min-height) !important;
+}
+
 .tabbrowser-tab {
   max-height: var(--tab-min-height) !important;
 }
