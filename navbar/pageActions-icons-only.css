@@ -17,10 +17,9 @@
 }
 
 #pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body > toolbarseparator  {
-
   display: none !important; /* Hide separators */
 }
 
-#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .subviewbutton-nav::after {
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body > .subviewbutton-nav::after {
    display: none !important; /* Hide dropmarkers (e.g. send to device) */
 }
