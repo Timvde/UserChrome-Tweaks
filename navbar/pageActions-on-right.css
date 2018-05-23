@@ -7,5 +7,6 @@
  */
 
 #pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body {
-   direction: rtl !important; 
+   direction: rtl !important; /* Make them work right-to-left */
+   padding-right: 1em !important; /* Add padding to unhide last item */
 }
