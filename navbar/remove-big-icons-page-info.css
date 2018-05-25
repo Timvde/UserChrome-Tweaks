@@ -13,3 +13,7 @@
 .identity-popup-permission-item {
    padding-inline-start: 2.2em !important; /* Add padding to permission items in order to make their icons visible */
 }
+
+#identity-popup-securityView-body {
+  margin-inline-start: 1em !important; /* Fix security details padding */
+} 
