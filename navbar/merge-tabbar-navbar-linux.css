@@ -5,37 +5,14 @@
  * Contributor(s): Madis0
  */
 
-/* Variable values depending on layout. Use these to customize style. */
-
-/* Compact density */
-:root[uidensity=compact] {
-  --tabs-margin-left: 5.5em; /* Keep margin for button background */
-  --space-before-tabs: 33.5em; /* Left margin for nav bar */
-  --space-after-tabs: 2em; /* Right margin for caption button, menu */
-}
-
-/* Touch density */
-:root[uidensity=touch] {
-  --tabs-margin-left: 7.5em; /* Keep margin for button background */
-  --space-before-tabs: 32em; /* Left margin for nav bar */
-  --space-after-tabs: 2.3em; /* Right margin for caption button, menu */
-}
-
-/* Normal density */
-:root {
-  --tabs-margin-left: 6.4em; /* Keep margin for button background */
-  --space-before-tabs: 33em; /* Left margin for nav bar */
-  --space-after-tabs: 2em; /* Right margin for caption button, menu */
-}
-
 /* Static values only depending on touch density */
 :root[uidensity=compact] {
-  --nav-margin-top: -1.9em;
-  --menu-margin-top: 0.2em;
+  --nav-margin-top: -2em;
+  --menu-margin-top: 0.1em;
 }
 
 :root[uidensity=touch] {
-  --nav-margin-top: -2.5em;
+  --nav-margin-top: -2.6em;
   --menu-margin-top: 0.35em;
 }
 
@@ -46,18 +23,14 @@
 
 /* Adjust tab bar to get space first */
 #TabsToolbar {
-  margin-left: var(--tabs-margin-left) !important;
-  padding-left: var(--space-before-tabs) !important;
-  margin-right: var(--space-after-tabs) !important;
-  margin-bottom: -0.1em; !important; /* Remove bottom border */
+  padding-left: 37em !important; /* Add specific padding to left */
+  margin-bottom: -0.1em !important; 
 }
 
 /* Move nav bar to top left */
 #nav-bar {
   margin-top: var(--nav-margin-top) !important; /* Move nav bar up */
-  margin-right: 64.5vw !important; /* Cut it off with defined width */
-  margin-bottom: -0.08em !important; /* Remove bottom border */
-  background-color: transparent !important; /* Make it use tab bar colors */
+  margin-right: 72.5em !important; /* Cut it off with defined width */
 }
 
 /* Move menu button to top right */
