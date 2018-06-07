@@ -47,3 +47,8 @@
 .tabbrowser-tab[image] .tab-icon-sound[activemedia-blocked]:-moz-lwtheme-brighttext {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-small.svg#tab-audio-white-blocked") !important;
 }
+
+.tabbrowser-tab:not([image]) .tab-icon-sound {
+    -moz-box-ordinal-group: 0 !important;
+    margin-inline-end: 6px;
+}
