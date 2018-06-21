@@ -1,0 +1,10 @@
+/*
+ * Hides the header of the one-off-search buttons (the one that says "Search ... with:") on 
+ * the address bar and search bar autocomplete item list. Also hides "hide search settings" on search bar.
+ *
+ * Contributor(s): Madis0
+ */
+ 
+.search-panel-header {
+  display: none !important;
+}
