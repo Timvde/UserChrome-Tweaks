@@ -1,0 +1,11 @@
+/*
+ * Hides typical page info popup messages, including secure connection, tracking not detected and no permissions requested.
+ *
+ * Contributor(s): Madis0
+ */
+ 
+.identity-popup-connection-secure, 
+#tracking-not-detected, 
+#identity-popup-permission-empty-hint {
+  display: none !important;
+}
