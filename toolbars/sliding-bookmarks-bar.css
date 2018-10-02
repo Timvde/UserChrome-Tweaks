@@ -18,14 +18,17 @@
   width: 100%;
   transform: translateY(-100%);
   transition: transform 0.2s !important;
+  opacity: 0;
 }
 
 #navigator-toolbox:hover >
 #nav-bar ~ #PersonalToolbar:not([customizing]) {
   transform: translateY(0);
+  opacity: 1;
 }
 
 #toolbar-menubar:not([inactive="true"]) ~
 #nav-bar ~ #PersonalToolbar:not([customizing]) {
   transform: translateY(0);
+  opacity: 1;
 }
