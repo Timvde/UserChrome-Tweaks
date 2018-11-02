@@ -1,0 +1,23 @@
+/*
+ * Description: Changes the background color of newly opened tabs
+ *              to prevent white flashes 
+ *
+ * Contributor: Nicola Zanardi
+ */
+
+@-moz-document url(chrome://browser/content/browser.xul)
+{
+
+  #main-window,
+  browser[type="content-primary"],
+  browser[type="content"],
+  tabbrowser#content,
+  #content,
+  browser[type="content"] > html
+  {
+     /* The background is set to black now, but any color can be used */
+     background: #000000 !important;
+  }
+
+}
+
