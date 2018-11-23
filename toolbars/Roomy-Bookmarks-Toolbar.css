@@ -1,0 +1,31 @@
+/*
+ * Minimizes bookmarks toolbar items to their Favicon.
+ * Displays Folders as their label (hides the folder icon)
+ *
+ * Designed to mimick the appearance of the deprecated extension "Roomy Bookmarks Toolbar"
+ *
+ * Example bookmark bar after this tweak: https://i.imgur.com/GIa7ekW.png
+ *
+ * Contributor: Edward Webber (roomy.firefox@webbsense.com)
+ *
+ * Keywords: style firefox, bookmark icons, hide bookmark text, webextension bookmarks toolbar
+ */
+
+/* Hides bookmark text for all bookmarks displayed in a toolbar */
+.bookmark-item > .toolbarbutton-text  {
+  width: 0;
+}
+:root[uidensity="compact"] toolbarbutton.bookmark-item:not(.subviewbutton) {
+	margin: 0px;
+	padding: 2px 1px;
+}
+
+/* Show folder names instead of icon */
+toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
+	width: auto;
+}
+/* Show the folder icon only if the label is blank */
+toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-icon[label]:not([label=""]) {
+	width: 0px;
+}
+
