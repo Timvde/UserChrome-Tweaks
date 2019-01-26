@@ -4,10 +4,12 @@
  * Contributor(s): Madis0
  */
 
-#stop-reload-button:not([animate]) > #stop-button {
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #stop-reload-button:not([animate]) > #stop-button {
     list-style-image: url("chrome://browser/skin/tabbrowser/tab-loading.png") !important; /* Show throbber after the reload-to-stop animation, until stop-to-reload animation */
-}
+  }
 
-#stop-reload-button > #stop-button:hover {
-  list-style-image: url("chrome://browser/skin/stop.svg") !important; /* Show stop button on hover */
+  #stop-reload-button > #stop-button:hover {
+    list-style-image: url("chrome://browser/skin/stop.svg") !important; /* Show stop button on hover */
+  }
 }

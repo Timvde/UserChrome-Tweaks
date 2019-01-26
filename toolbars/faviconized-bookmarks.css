@@ -7,12 +7,14 @@
  * Contributor(s): Okamoi
  */
 
-/* Hides bookmark text for all bookmarks displayed in a toolbar */
-.bookmark-item > .toolbarbutton-text  {
-  display: none !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Hides bookmark text for all bookmarks displayed in a toolbar */
+  .bookmark-item > .toolbarbutton-text  {
+    display: none !important;
+  }
 
-/* Small visual tweak so it looks exactly the same as if the bookmark really had no text */
-.bookmark-item > .toolbarbutton-icon  {
-  margin-inline-end: 0px !important;
+  /* Small visual tweak so it looks exactly the same as if the bookmark really had no text */
+  .bookmark-item > .toolbarbutton-icon  {
+    margin-inline-end: 0px !important;
+  }
 }

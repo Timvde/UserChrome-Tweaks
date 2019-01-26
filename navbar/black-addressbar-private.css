@@ -4,8 +4,10 @@
  * Contributor(s): Madis0
  */
 
-#main-window[privatebrowsingmode="temporary"] #urlbar
-{
-  background: black !important;
-  color: white !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #main-window[privatebrowsingmode="temporary"] #urlbar
+  {
+    background: black !important;
+    color: white !important;
+  }
 }

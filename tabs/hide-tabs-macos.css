@@ -8,35 +8,37 @@
  * Contributor(s): Isaac-Newt, Ivan0xFF
  */
 
-#TabsToolbar {
-  height: 22px !important;
-  visibility: collapse;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #TabsToolbar {
+    height: 22px !important;
+    visibility: collapse;
+  }
 
-.tabbrowser-tabs {
-  height: 22px !important;
-  visibility: collapse;
-}
+  .tabbrowser-tabs {
+    height: 22px !important;
+    visibility: collapse;
+  }
 
-#tabbrowser-tabs {
-  visibility: collapse;
-  height: 22px !important;
-}
+  #tabbrowser-tabs {
+    visibility: collapse;
+    height: 22px !important;
+  }
 
-#nav-bar{
-  border-top-width: 0px !important;
-}
+  #nav-bar{
+    border-top-width: 0px !important;
+  }
 
-/* Position window controls */
-#titlebar-buttonbox-container {
-  margin-left: 5px !important;
-  margin-top: 5px !important;
-}
+  /* Position window controls */
+  #titlebar-buttonbox-container {
+    margin-left: 5px !important;
+    margin-top: 5px !important;
+  }
 
-/*
- * Make room for window controls.
- * Only apply this style when not in fullscreen mode.
- */
-#main-window:not([inFullscreen]) #nav-bar{
-  padding: 0px 5px 0px 75px !important;
+  /*
+   * Make room for window controls.
+   * Only apply this style when not in fullscreen mode.
+   */
+  #main-window:not([inFullscreen]) #nav-bar{
+    padding: 0px 5px 0px 75px !important;
+  }
 }

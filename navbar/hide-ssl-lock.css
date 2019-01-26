@@ -5,8 +5,10 @@
  * Contributor(s): Madis0
  */
 
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
-#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
+  #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
+  #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
+    display: none !important;
+  }
 }

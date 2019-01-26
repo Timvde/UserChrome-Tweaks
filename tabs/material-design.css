@@ -7,18 +7,20 @@
  * Contributor(s): Madis0
  */
 
-.tabbrowser-tab[visuallyselected="true"] {
-  color: inherit !important; /* Use background tab text color for foreground tabs */
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab[visuallyselected="true"] {
+    color: inherit !important; /* Use background tab text color for foreground tabs */
+  }
 
-.tab-background[selected=true] {
-  background-color: transparent !important; /* Make selected tab bg transparent */
-}
+  .tab-background[selected=true] {
+    background-color: transparent !important; /* Make selected tab bg transparent */
+  }
 
-.tab-line {
-  -moz-box-ordinal-group: 2; /* Move the line to the bottom */
-}
+  .tab-line {
+    -moz-box-ordinal-group: 2; /* Move the line to the bottom */
+  }
 
-.tab-line[selected=true] {
-  background-color: white !important; /* Make the line white, remove this for default color */
+  .tab-line[selected=true] {
+    background-color: white !important; /* Make the line white, remove this for default color */
+  }
 }

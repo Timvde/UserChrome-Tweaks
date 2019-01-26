@@ -8,14 +8,16 @@
  *                 https://www.reddit.com/r/FirefoxCSS/comments/7evwow/show_bookmarks_toolbar_only_on_new_tab/
  */
 
-#main-window #PersonalToolbar {
-  visibility: collapse !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #main-window #PersonalToolbar {
+    visibility: collapse !important;
+  }
 
-#main-window[title^="about:newtab"] #PersonalToolbar,
-#main-window[title^="New Tab"] #PersonalToolbar,
-#main-window[title^="Nightly"] #PersonalToolbar,
-#main-window[title^="Mozilla Firefox"] #PersonalToolbar,
-#main-window[title^="Firefox"] #PersonalToolbar {
-  visibility: visible !important;
+  #main-window[title^="about:newtab"] #PersonalToolbar,
+  #main-window[title^="New Tab"] #PersonalToolbar,
+  #main-window[title^="Nightly"] #PersonalToolbar,
+  #main-window[title^="Mozilla Firefox"] #PersonalToolbar,
+  #main-window[title^="Firefox"] #PersonalToolbar {
+    visibility: visible !important;
+  }
 }

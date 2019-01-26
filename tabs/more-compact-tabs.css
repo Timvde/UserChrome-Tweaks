@@ -5,16 +5,18 @@
 * Contributor(s): DrPugsley
 */
 
-[uidensity="compact"]:root {
-  --tab-min-height: 22px !important;
-  --newtab-margin: -3px 0 -3px -3px !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  [uidensity="compact"]:root {
+    --tab-min-height: 22px !important;
+    --newtab-margin: -3px 0 -3px -3px !important;
+  }
 
-.tabbrowser-tab {
-  max-height: var(--tab-min-height) !important;
-}
+  .tabbrowser-tab {
+    max-height: var(--tab-min-height) !important;
+  }
 
-.tabs-newtab-button{
-  margin: var(--newtab-margin) !important;
-}
+  .tabs-newtab-button{
+    margin: var(--newtab-margin) !important;
+  }
 
+}

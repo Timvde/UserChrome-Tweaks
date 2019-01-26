@@ -6,7 +6,9 @@
  * Original by Jeremy Sturdivant (https://superuser.com/a/238435) -- CC BY-SA
  */
 
-.tabbrowser-tab {
-  min-width: 1em !important;
-  clip-width: 1em !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab {
+    min-width: 1em !important;
+    clip-width: 1em !important;
+  }
 }

@@ -6,6 +6,8 @@
  * Contributor(s): Madis0
  */
 
-#main-window[sizemode="maximized"] :-moz-any(#back-button, #forward-button) {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #main-window[sizemode="maximized"] :-moz-any(#back-button, #forward-button) {
+    display: none !important;
+  }
 }

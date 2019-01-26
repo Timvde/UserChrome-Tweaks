@@ -4,10 +4,12 @@
  * Contributor(s): Timvde
  */
 
-.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
-  display: none !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+    display: none !important;
+  }
 
-.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
-  display: -moz-box !important;
+  .tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+    display: -moz-box !important;
+  }
 }

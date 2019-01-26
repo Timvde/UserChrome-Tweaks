@@ -6,6 +6,8 @@
  * Contributor(s): DrPugsley, Madis0
  */
 
-#pageActionButton {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #pageActionButton {
+    display: none !important;
+  }
 }

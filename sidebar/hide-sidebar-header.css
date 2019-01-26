@@ -7,6 +7,8 @@
  * Contributor(s): Chris Morgan
  */
 
-#sidebar-header {
-  display: none;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #sidebar-header {
+    display: none;
+  }
 }

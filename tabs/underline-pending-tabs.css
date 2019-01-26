@@ -4,7 +4,9 @@
  * Contributor(s): josemam
  */
 
-.tabbrowser-tab[pending] {
-  text-decoration: underline;
-  opacity: .5;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab[pending] {
+    text-decoration: underline;
+    opacity: .5;
+  }
 }

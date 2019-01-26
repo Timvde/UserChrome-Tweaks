@@ -4,6 +4,8 @@
  * Contributor(s): Madis0
  */
 
-.findbar-find-status {
-  visibility: collapse !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .findbar-find-status {
+    visibility: collapse !important;
+  }
 }

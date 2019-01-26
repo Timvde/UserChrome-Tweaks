@@ -4,10 +4,12 @@
  * Contributor: Joachim Vandersmissen
  */
 
-#tracking-protection-icon {
-  visibility: collapse !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #tracking-protection-icon {
+    visibility: collapse !important;
+  }
 
-#identity-box:hover > #tracking-protection-icon {
-  visibility: visible !important;
+  #identity-box:hover > #tracking-protection-icon {
+    visibility: visible !important;
+  }
 }

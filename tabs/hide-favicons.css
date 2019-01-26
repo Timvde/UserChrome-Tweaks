@@ -4,7 +4,8 @@
  * Contributor(s): Madis0
  */
 
-.tabbrowser-tab:not([busy="true"]):not([pinned]) .tab-icon-image
-{
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab:not([busy="true"]):not([pinned]) .tab-icon-image {
+    display: none !important;
+  }
 }

@@ -4,24 +4,26 @@
  * Contributor(s): Skrity
  */
 
-:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
-  background-color: unset !important;
-  border: unset !important;
-  padding: var(--toolbarbutton-inner-padding) !important;
-  border-radius: var(--toolbarbutton-border-radius) !important;
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  :root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+    background-color: unset !important;
+    border: unset !important;
+    padding: var(--toolbarbutton-inner-padding) !important;
+    border-radius: var(--toolbarbutton-border-radius) !important;
+    width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  }
 
-/* Hover and Active states to mimic other buttons */
-:root:not([uidensity="compact"]) #back-button:hover:not([disabled]) > .toolbarbutton-icon {
-  background-color: var(--toolbarbutton-hover-background) !important;
-}
+  /* Hover and Active states to mimic other buttons */
+  :root:not([uidensity="compact"]) #back-button:hover:not([disabled]) > .toolbarbutton-icon {
+    background-color: var(--toolbarbutton-hover-background) !important;
+  }
 
-:root:not([uidensity="compact"]) #back-button:active:not([disabled]) > .toolbarbutton-icon {
-  background-color: var(--toolbarbutton-active-background) !important;
-}
+  :root:not([uidensity="compact"]) #back-button:active:not([disabled]) > .toolbarbutton-icon {
+    background-color: var(--toolbarbutton-active-background) !important;
+  }
 
-/* Remove pre-padding */
-:root:not([uidensity="compact"]) #back-button {
-  padding-inline-start: 3px !important;
+  /* Remove pre-padding */
+  :root:not([uidensity="compact"]) #back-button {
+    padding-inline-start: 3px !important;
+  }
 }

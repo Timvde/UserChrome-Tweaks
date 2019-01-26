@@ -4,7 +4,8 @@
  * Contributor(s): DrPugsley
  */
 
-:root {
-  --toolbarbutton-border-radius: 0px !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  :root {
+    --toolbarbutton-border-radius: 0px !important;
+  }
 }
-

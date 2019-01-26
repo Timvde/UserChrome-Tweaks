@@ -3,7 +3,9 @@
  *
  * Contributor(s): BubiBalboa via reddit.com/user/marciiF
  */
- 
-#TabsToolbar {
-  padding-top: 1px !important;
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #TabsToolbar {
+    padding-top: 1px !important;
+  }
 }

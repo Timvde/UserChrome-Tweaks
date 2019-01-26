@@ -6,23 +6,25 @@
  * http://forums.mozillazine.org/viewtopic.php?p=14404121#p14404121
  */
 
-#urlbar {
-  position: relative;
-  z-index: 1;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #urlbar {
+    position: relative;
+    z-index: 1;
+  }
 
-#identity-box:after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+  #identity-box:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
-#urlbar[pageproxystate="valid"] > #identity-box.notSecure:after,
-#urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms:after,
-#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent:after {
-  background: red;
+  #urlbar[pageproxystate="valid"] > #identity-box.notSecure:after,
+  #urlbar[pageproxystate="valid"] > #identity-box.insecureLoginForms:after,
+  #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveContent:after {
+    background: red;
+  }
 }

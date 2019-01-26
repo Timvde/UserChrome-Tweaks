@@ -3,7 +3,9 @@
  *
  * Contributor(s): Madis0
  */
- 
-#urlbar[pageproxystate="valid"] > #identity-box.extensionPage > #extension-icon {
-  display: none !important;
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #urlbar[pageproxystate="valid"] > #identity-box.extensionPage > #extension-icon {
+    display: none !important;
+  }
 }

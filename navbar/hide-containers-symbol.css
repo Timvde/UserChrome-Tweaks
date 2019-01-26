@@ -4,6 +4,8 @@
  * Contributor(s): Madis0
  */
 
-#userContext-indicator {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #userContext-indicator {
+    display: none !important;
+  }
 }
