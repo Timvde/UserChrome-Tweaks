@@ -4,6 +4,8 @@
  * Contributor(s): PilzAdam
  */
 
-#appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator {
+    display: none !important;
+  }
 }

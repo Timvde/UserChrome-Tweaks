@@ -4,6 +4,8 @@
  * Contributor(s): Madis0
  */
 
-#identity-box {
-  direction: rtl;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #identity-box {
+    direction: rtl;
+  }
 }

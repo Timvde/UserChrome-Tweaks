@@ -5,16 +5,18 @@
  * Contributor(s): Madis0
  */
 
-/* Hide info icon for sites that don't have permissions */
-#urlbar :not(.grantedPermissions) #identity-icon {
-        transition: 300ms !important; /* Animate icon hiding */
-	opacity: 0 !important; /* Make icons transparent */
-	-moz-margin-end: -1.1em !important; /* Hide icons by offsetting them */
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Hide info icon for sites that don't have permissions */
+  #urlbar :not(.grantedPermissions) #identity-icon {
+    transition: 300ms !important; /* Animate icon hiding */
+    opacity: 0 !important; /* Make icons transparent */
+    -moz-margin-end: -1.1em !important; /* Hide icons by offsetting them */
+  }
 
-/* Show info icon on navbar hover, except for new tab page search icon */
-#urlbar[pageproxystate="valid"]:hover #identity-icon {
-        transition: 300ms !important; /* Animate icon showing */
-	opacity: 1 !important; /* Make icons opaque */
-	-moz-margin-end: initial !important; /* Use initial margins to show icons */
+  /* Show info icon on navbar hover, except for new tab page search icon */
+  #urlbar[pageproxystate="valid"]:hover #identity-icon {
+    transition: 300ms !important; /* Animate icon showing */
+    opacity: 1 !important; /* Make icons opaque */
+    -moz-margin-end: initial !important; /* Use initial margins to show icons */
+  }
 }

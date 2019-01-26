@@ -4,10 +4,12 @@
  * Contributor(s): Madis0
  */
 
-#identity-icon-label { /* Hides the EV SSL label */
-  visibility: collapse !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #identity-icon-label { /* Hides the EV SSL label */
+    visibility: collapse !important;
+  }
 
-#identity-box:hover > #identity-icon-labels > #identity-icon-label { /* Shows the label on identity box hover */
-  visibility: visible !important;
+  #identity-box:hover > #identity-icon-labels > #identity-icon-label { /* Shows the label on identity box hover */
+    visibility: visible !important;
+  }
 }

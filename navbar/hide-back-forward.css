@@ -4,6 +4,8 @@
  * Contributor(s): Madis0, Timvde
  */
 
-#main-window :-moz-any(#back-button, #forward-button) {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #main-window :-moz-any(#back-button, #forward-button) {
+    display: none !important;
+  }
 }

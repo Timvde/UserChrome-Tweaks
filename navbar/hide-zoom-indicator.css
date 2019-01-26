@@ -6,12 +6,14 @@
  * Contributor(s): BubiBalboa
  */
 
-/* Hides the zoom indicator */
-#urlbar-zoom-button { 
-  display: none !important; 
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Hides the zoom indicator */
+  #urlbar-zoom-button { 
+    display: none !important; 
+  }
 
-/* Hides vertical separator line to make it look cleaner */
-#pageActionSeparator { 
-  display: none !important;
+  /* Hides vertical separator line to make it look cleaner */
+  #pageActionSeparator { 
+    display: none !important;
+  }
 }

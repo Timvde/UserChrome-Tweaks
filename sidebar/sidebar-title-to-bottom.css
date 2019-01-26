@@ -4,10 +4,12 @@
  * Contributor(s): Dmitry Sergeenkov
  */
 
-#sidebar-box {
-  -moz-box-direction: reverse;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #sidebar-box {
+    -moz-box-direction: reverse;
+  }
 
-#sidebar-switcher-arrow {
-  transform: rotate(180deg);
+  #sidebar-switcher-arrow {
+    transform: rotate(180deg);
+  }
 }

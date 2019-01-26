@@ -6,7 +6,8 @@
  * Contributor(s): Madis0
  */
 
-
-#urlbar > #identity-box.notSecureText > #identity-icon-labels > #identity-icon-label {
-  color: rgba(255, 0, 0, 0.867) !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #urlbar > #identity-box.notSecureText > #identity-icon-labels > #identity-icon-label {
+    color: rgba(255, 0, 0, 0.867) !important;
+  }
 }

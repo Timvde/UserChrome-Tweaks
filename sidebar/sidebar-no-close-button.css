@@ -4,6 +4,8 @@
  * Contributor(s): Dmitry Sergeenkov
  */
 
-#sidebar-close {
-  visibility: collapse;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #sidebar-close {
+    visibility: collapse;
+  }
 }

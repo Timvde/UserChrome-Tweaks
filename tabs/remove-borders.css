@@ -3,11 +3,13 @@
  *
  * Contributor(s): Madis0
  */
- 
-.tabbrowser-tab::after, .tabbrowser-tab::before {
-   border-left: none !important; /* Remove borders from inactive tabs */
-}
 
-:root {
-  --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab::after, .tabbrowser-tab::before {
+     border-left: none !important; /* Remove borders from inactive tabs */
+  }
+
+  :root {
+    --tabs-border: transparent !important; /* Remove borders from active tab and below tabs */
+  }
 }

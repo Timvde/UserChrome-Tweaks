@@ -8,16 +8,18 @@
  * Contributor(s): Isaac-Newt
  */
 
-/* Tabs On Bottom */
-#TabsToolbar {
-  -moz-box-ordinal-group: 2;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Tabs On Bottom */
+  #TabsToolbar {
+    -moz-box-ordinal-group: 2;
+  }
 
-#nav-bar{
-  border-top-width: 0px !important;
-}
+  #nav-bar{
+    border-top-width: 0px !important;
+  }
 
-/* Bookmarks Bar fix */
-#PersonalToolbar {
-  -moz-box-ordinal-group: 2;
+  /* Bookmarks Bar fix */
+  #PersonalToolbar {
+    -moz-box-ordinal-group: 2;
+  }
 }

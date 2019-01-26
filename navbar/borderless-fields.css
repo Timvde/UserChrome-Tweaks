@@ -6,7 +6,9 @@
  * Contributor(s): Madis0
  */
 
-#urlbar, .searchbar-textbox {
-  border: none !important;
-  box-shadow: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #urlbar, .searchbar-textbox {
+    border: none !important;
+    box-shadow: none !important;
+  }
 }

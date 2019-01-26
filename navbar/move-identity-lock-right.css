@@ -5,23 +5,25 @@
  * Contributor(s): Madis0, Mart3323
  */
 
-#PopupAutoCompleteRichResult .autocomplete-richlistitem {
-  padding-inline-start: var(--item-padding-end) !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #PopupAutoCompleteRichResult .autocomplete-richlistitem {
+    padding-inline-start: var(--item-padding-end) !important;
+  }
 
-#urlbar > #identity-box
-{
-  -moz-box-ordinal-group: 99 !important; /* Move identity box to the end */
-  border-inline-end: none !important; /* Remove any right borders from it (internal pages, EV SSL) */
-  margin-inline-end: 0em !important; /* Remove the end margin */
-  margin-inline-start: -0.2em !important; /* Remove the start margin */
-}
+  #urlbar > #identity-box
+  {
+    -moz-box-ordinal-group: 99 !important; /* Move identity box to the end */
+    border-inline-end: none !important; /* Remove any right borders from it (internal pages, EV SSL) */
+    margin-inline-end: 0em !important; /* Remove the end margin */
+    margin-inline-start: -0.2em !important; /* Remove the start margin */
+  }
 
-#urlbar > #page-action-buttons > #pageActionButton {
-  -moz-box-ordinal-group: 99 !important; /* Move the 3-dot page action button to the rightmost of page action icons */
-}
+  #urlbar > #page-action-buttons > #pageActionButton {
+    -moz-box-ordinal-group: 99 !important; /* Move the 3-dot page action button to the rightmost of page action icons */
+  }
 
-.urlbar-input-box
-{
-  margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
-} /* If you're using reload-button-addressbar-left.css, set the value to 2em. */
+  .urlbar-input-box
+  {
+    margin-left: 0.5em !important; /* Add some margin back to left of urlbar to make it prettier */
+  } /* If you're using reload-button-addressbar-left.css, set the value to 2em. */
+}

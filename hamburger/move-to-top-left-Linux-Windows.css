@@ -4,25 +4,27 @@
  * Contributor(s): Alex Vallat
  */
 
-#PanelUI-button {
-  -moz-box-ordinal-group: 0;
-  border-left: none !important;
-  position: absolute;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #PanelUI-button {
+    -moz-box-ordinal-group: 0;
+    border-left: none !important;
+    position: absolute;
+  }
 
-:root[uidensity=compact] #PanelUI-button {
-  margin-top: -28px;
-}
+  :root[uidensity=compact] #PanelUI-button {
+    margin-top: -28px;
+  }
 
-#PanelUI-button {
-  margin-top: -30px;
-}
+  #PanelUI-button {
+    margin-top: -30px;
+  }
 
-:root[uidensity=touch] #PanelUI-button {
-  margin-top: -36px;
-}
+  :root[uidensity=touch] #PanelUI-button {
+    margin-top: -36px;
+  }
 
-#TabsToolbar {
-  /* Ensure the padding is always present even when maximized */
-  padding-inline-start: 40px !important;
+  #TabsToolbar {
+    /* Ensure the padding is always present even when maximized */
+    padding-inline-start: 40px !important;
+  }
 }

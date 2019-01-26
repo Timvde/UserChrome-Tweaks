@@ -6,21 +6,23 @@
  * Contributor(s): Alex Vallat
  */
 
-:root[uidensity=compact] #urlbar,
-:root[uidensity=compact] .searchbar-textbox {
-  font-size: unset !important;
-  min-height: 24px !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  :root[uidensity=compact] #urlbar,
+  :root[uidensity=compact] .searchbar-textbox {
+    font-size: unset !important;
+    min-height: 24px !important;
+  }
 
-:root[uidensity=compact] #identity-box {
-  max-height: 22px;
-}
+  :root[uidensity=compact] #identity-box {
+    max-height: 22px;
+  }
 
-:root[uidensity=compact] #nav-bar .toolbarbutton-1 {
-  padding: 0px !important;
-}
+  :root[uidensity=compact] #nav-bar .toolbarbutton-1 {
+    padding: 0px !important;
+  }
 
-/* Compatibility with auto-hide.css */
-:root[uidensity=compact] #navigator-toolbox {
-  --nav-bar-height: 31px !important;
+  /* Compatibility with auto-hide.css */
+  :root[uidensity=compact] #navigator-toolbox {
+    --nav-bar-height: 31px !important;
+  }
 }

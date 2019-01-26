@@ -5,12 +5,14 @@
  * https://www.reddit.com/r/FirefoxCSS/comments/7iivzf/iconsonly_overflow_menu/
  */
 
-#widget-overflow-fixed-list {
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #widget-overflow-fixed-list {
     display: grid; /* Display icons in a grid */
     grid-template-rows: repeat(1, 1.5em); /* One row with button width 1.5em */
     grid-template-columns: repeat(20, 1.5em); /* Twenty columns with button height 1.5em */
-}
+  }
 
-#widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text {
+  #widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text {
     display: none !important; /* Hide labels just in case */
+  }
 }

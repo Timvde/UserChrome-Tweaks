@@ -5,8 +5,10 @@
  * Contributor(s): PilzAdam
  */
 
-#context-sendpagetodevice, #context-sep-sendpagetodevice,
-#context-sendlinktodevice, #context-sep-sendlinktodevice,
-#context_sendTabToDevice, #context_sendTabToDevice_separator {
-  display: none !important;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #context-sendpagetodevice, #context-sep-sendpagetodevice,
+  #context-sendlinktodevice, #context-sep-sendlinktodevice,
+  #context_sendTabToDevice, #context_sendTabToDevice_separator {
+    display: none !important;
+  }
 }

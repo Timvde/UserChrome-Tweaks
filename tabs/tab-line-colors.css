@@ -8,14 +8,16 @@
  * Contributor(s): Isaac-Newt
  */
 
-.tabbrowser-tab[usercontextid] .tab-line{
-  background-color:var(--identity-tab-color)!important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .tabbrowser-tab[usercontextid] .tab-line{
+    background-color:var(--identity-tab-color)!important;
+  }
 
-.tabbrowser.tab[usercontextid] .tab-line {
-  background:var(--identity-tab-color) !important;
-}
+  .tabbrowser.tab[usercontextid] .tab-line {
+    background:var(--identity-tab-color) !important;
+  }
 
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
-  background: none !important;
+  .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-bottom-line {
+    background: none !important;
+  }
 }

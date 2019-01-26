@@ -6,14 +6,16 @@
  * Contributor(s): Andrei Cristian Petcu
  */
 
-.browserContainer {
-  background-color: var(--url-and-searchbar-background-color, hsla(0,0%,100%,.8)) !important;
-}
+@-moz-document url(chrome://browser/content/browser.xul) {
+  .browserContainer {
+    background-color: var(--url-and-searchbar-background-color, hsla(0,0%,100%,.8)) !important;
+  }
 
-#sidebar {
-  background-color: white !important;
-}
+  #sidebar {
+    background-color: white !important;
+  }
 
-.sidebar-placesTree {
-  background-color: white !important;
+  .sidebar-placesTree {
+    background-color: white !important;
+  }
 }

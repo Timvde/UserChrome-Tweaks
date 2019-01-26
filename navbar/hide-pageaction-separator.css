@@ -4,6 +4,8 @@
  * Contributor(s): Madis0
  */
 
-#pageActionSeparator{
-  display: none;
+@-moz-document url(chrome://browser/content/browser.xul) {
+  #pageActionSeparator{
+    display: none;
+  }
 }
