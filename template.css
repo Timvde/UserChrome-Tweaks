@@ -1,11 +1,17 @@
-/*
- * Description:
+/** ==UserStyle==
+ * @name Style Name
+ * @author github-username
+ * @licence GPLv3
+ * @description
+ *     Text
+ *     in multiple
+ *     lines
  *
- * Screenshot:
- *
- * Contributor(s):
+ * @namespace    https://github.com/Timvde/UserChrome-Tweaks
+ * @homepageURL  https://github.com/Timvde/UserChrome-Tweaks
+ * @supportURL   https://github.com/Timvde/UserChrome-Tweaks/issues
  */
 
-/* Please read the code style guidelines in CONTRIBUTING.md */
-
-/* Your code here */
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Your code here */
+}
