@@ -9,14 +9,29 @@
   --tab-min-height: 29px;
 }
 
+:root[uidensity=compact][extradragspace]:not([sizemode="normal"]) #navigator-toolbox {
+  --nav-bar-height: 33px;
+  --tab-min-height: 21px;
+}
+
 :root:not([uidensity]) #navigator-toolbox {
   --nav-bar-height: 39px;
   --tab-min-height: 33px;
 }
 
+:root:not([uidensity])[extradragspace]:not([sizemode="normal"]) #navigator-toolbox {
+  --nav-bar-height: 39px;
+  --tab-min-height: 25px;
+}
+
 :root[uidensity=touch] #navigator-toolbox {
   --nav-bar-height: 41px;
   --tab-min-height: 41px;
+}
+
+:root[uidensity=touch][extradragspace]:not([sizemode="normal"]) #navigator-toolbox {
+  --nav-bar-height: 41px;
+  --tab-min-height: 33px;
 }
 
 #navigator-toolbox {
