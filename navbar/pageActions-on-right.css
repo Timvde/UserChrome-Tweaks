@@ -1,0 +1,12 @@
+/*
+ * Aligns the PageActions overview items (under the three dots menu) right-to-left.
+ * To be used with pageActions-icons-only.css in order to make them look in the menu
+ * as if they were in the address bar.
+ *
+ * Contributor(s): Madis0
+ */
+
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body {
+   direction: rtl !important; /* Make them work right-to-left */
+   padding-right: 1em !important; /* Add padding to unhide last item */
+}
