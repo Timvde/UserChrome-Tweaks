@@ -1,0 +1,25 @@
+/*
+ * Hides the labels of the PageActions overview items (under the three dots menu), making them show only as icons.
+ *
+ * Contributor(s): Madis0, reddit user poisonocity
+ * https://www.reddit.com/r/FirefoxCSS/comments/7iivzf/iconsonly_overflow_menu/
+ * https://github.com/Timvde/UserChrome-Tweaks/blob/master/navbar/overflow-icons-only.css
+ */
+
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body {
+    display: grid; /* Display icons in a grid */
+    grid-template-rows: repeat(1, 1.5em); /* One row with button width 1.5em */
+    grid-template-columns: repeat(20, 1.5em); /* Twenty columns with button height 1.5em */
+}
+
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .panel-subview-body .subviewbutton > .toolbarbutton-text {
+    display: none !important; /* Hide labels just in case */
+}
+
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body > toolbarseparator  {
+  display: none !important; /* Hide separators */
+}
+
+#pageActionPanel > #pageActionPanelMultiView > .panel-viewcontainer > .panel-viewstack > .PanelUI-subView > .panel-subview-body > .subviewbutton-nav::after {
+   display: none !important; /* Hide dropmarkers (e.g. send to device) */
+}
