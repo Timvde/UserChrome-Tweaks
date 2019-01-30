@@ -1,0 +1,81 @@
+/*
+ * Description: Multi-row tab bar with rounded corners
+ *
+ * Contributor(s): Kunjan (submitter)
+ */
+
+/* To change width of tabs; enter "about:config" in browser address field
+then change value for "browser.tabs.tabMinWidth" to 120 e.g. */
+
+.tabbrowser-tab:not([pinned]) {
+  min-width:35px;max-width:35px;
+}
+.tabbrowser-tab,.tab-background {
+  height:var(--tab-min-height);
+}
+.tab-stack {
+  width: 100%;
+}
+#tabbrowser-tabs .scrollbox-innerbox {
+  display: flex;flex-wrap: wrap;
+}
+#tabbrowser-tabs .arrowscrollbox-scrollbox {
+  overflow: visible;display: block;
+}
+#titlebar,#titlebar-buttonbox {
+  height:var(--tab-min-height) !important;
+}
+#titlebar {
+  margin-bottom:calc(var(--tab-min-height)*-1) !important;
+}
+#main-window[sizemode="maximized"] #titlebar {
+  margin-bottom:calc(6px + var(--tab-min-height)*-1) !important;
+}
+#main-window[sizemode="maximized"] #TabsToolbar {
+  margin-left:var(--tab-min-height);
+}
+#titlebar:active {
+  margin-bottom:0 !important;
+}
+#titlebar:active #titlebar-content {
+  margin-bottom:var(--tab-min-height) !important;
+}
+#tabbrowser-tabs .scrollbutton-up,.tabbrowser-tabs .scrollbutton-down,#alltabs-button,.tabbrowser-tab:not([fadein]) {
+  display: none;
+}
+
+/* adds curves to tab corners; remove or comment out all below to remove rounded corners */
+/* Curve the background tabs at the upper left and right corners
+May not work on add-on themes. */
+.tabbrowser-tab {
+  border-radius: 10px 10px 0px 0px / 15px 15px 0px 0px !important;
+}
+/* Curve active tab and slightly overlap neighboring tabs */
+.tabbrowser-tab .tab-background[selected="true"] {
+  margin-left: -1px !important;
+  margin-right: -1px !important;
+  border-radius: 10px 10px 0px 0px / 15px 15px 0px 0px !important;
+}
+/* Shorten the tab line along the tops of tabs */
+.tab-line {
+  margin-left: 9px !important;
+  margin-right: 9px !important;
+}
+/* Shorten the vertical lines between background tabs */
+.tabbrowser-tab::before, .tabbrowser-tab::after {
+  margin-top: 9px !important;
+}
+
+/** "Light" Theme (Dark Text) **/
+
+/* Border the background tabs (10% gray) for greater visibility */
+#main-window:not([lwthemetextcolor="bright"]) .tabbrowser-tab:not([selected="true"]) {
+  border: 1px solid rgba(0,0,0,.1) !important;
+  border-bottom-color: transparent !important;
+  margin-right: -1px !important;
+}
+/* Remove short vertical lines between background tabs */
+#main-window:not([lwthemetextcolor="bright"]) .tabbrowser-tab::before, 
+#main-window:not([lwthemetextcolor="bright"]) .tabbrowser-tab::after {
+  border: none !important;
+}
