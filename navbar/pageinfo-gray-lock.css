@@ -1,0 +1,9 @@
+/*
+ * Makes the secure connection padlock gray in page info popup. Best used with hide-ssl-lock.css
+ *
+ * Contributor(s): Madis0
+ */
+ 
+#identity-popup[connection^="secure"] .identity-popup-security-content {
+  fill: gray !important;
+}
