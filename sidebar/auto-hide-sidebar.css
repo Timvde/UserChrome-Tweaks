@@ -18,6 +18,7 @@
   left: var(--sidebar-hover-width) !important;
   min-width: var(--sidebar-hover-width) !important;
   max-width: var(--sidebar-hover-width) !important;
+  border-right: 1px solid var(--sidebar-border-color);
 }
 
 #sidebar-box:hover {
@@ -42,4 +43,5 @@
 
 /* #sidebar-splitter styles the divider between the sidebar and the rest of the browser. */
 #sidebar-splitter {
+  display: none;
 }
