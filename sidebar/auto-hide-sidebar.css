@@ -31,7 +31,7 @@
   opacity: 0 !important;
 }
 
-#sidebar:hover {
+#sidebar-box:hover #sidebar {
   opacity: 1 !important;
 }
 
