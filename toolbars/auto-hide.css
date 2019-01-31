@@ -73,13 +73,13 @@
 :root:not([customizing]) #nav-bar:focus-within {
   max-height: var(--nav-bar-height);
   opacity: 1;
-  transition: opacity 0.15s ease-in, max-height 0.15s linear;
 }
 
 :root:not([customizing]) #navigator-toolbox {
   max-height: calc(var(--tabbar-height) + var(--trigger-area-height));
   min-height: var(--tabbar-height);
   margin-bottom: calc(-1 * var(--trigger-area-height));
+  transition: opacity 0.15s ease-in, max-height 0.15s linear;
 }
 
 :root:not([customizing]) #navigator-toolbox:hover,
@@ -93,13 +93,13 @@
   max-height: 0 !important;
   min-height: 0.1px !important;
   opacity: 0;
-  transition: opacity 0.15s ease-in !important;
 }
 
 :root:not([customizing]) :hover > #PersonalToolbar,
 :root:not([customizing]) #navigator-toolbox:focus-within #PersonalToolbar {
   max-height: 4em !important;
   opacity: 1;
+  transition: opacity 0.15s ease-in !important;
 }
 
 /* Lightweight Theme Support */
