@@ -26,6 +26,9 @@ toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-text {
 }
 /* Show the folder icon only if the label is blank */
 toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-icon[label]:not([label=""]) {
-	width: 0px;
+	width: 0px !important;
 }
-
+/* Hide the little bit of padding between the icon and label */
+#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]) {
+  margin-inline-end: 0px !important;
+}
