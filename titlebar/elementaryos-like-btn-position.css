@@ -10,32 +10,29 @@
  *
  */
 
-#titlebar-buttonbox {
+.toolbar-items{
+	position: absolute !important;
+	left: 34px !important;
+	width: calc(100vw - 100px) !important;
+}
+#TabsToolbar-customization-target{
+	width: 100% !important;
+	z-index: 10 !important;
+}
+.tabs-newtab-button{
+	z-index: 15 !important;
+}
+.tabbrowser-tab{
+	z-index: 15 !important;
+}
+.titlebar-buttonbox{
 	display: flex !important;
-	flex-direction: row-reverse !important; /*reverse buttons order (C:M:m)*/
+	flex-direction: row-reverse !important;
+	z-index: 5 !important;
 }
-.titlebar-placeholder[type="pre-tabs"] {
-	display: -moz-box !important;
-	width: 38px !important; /*reserving some pixels of space for the C btn*/
-	border: 0 !important;
+.titlebar-min{
+	display: none !important;
 }
-#titlebar-close{
-	display: -moz-box !important;
-	margin-right: calc(100vw - 34px - 34px) !important;
-	/*setting a loooong C btn right-margin (long nearly as the window width)*/
-}
-#titlebar-max{
-	display: -moz-box !important;
-}
-#titlemar-min{
-	display: none !important;		/*hiding m btn*/
-}
-#titlebar-spacer {
-	max-width: 0px !important;		/*setting 0 pixels long title spacer*/
-	display: -moz-box !important;	/*or display: none !important*/
-}
-#tabbrowser-tabs{
-	max-width: calc(100vw - 70px - 80px) !important;
-	min-width: calc(100vw - 70px - 80px) !important;
-	z-index: 2 !important; /*putting tabs-bar over buttonbox*/
+.titlebar-close{
+	margin-right: calc(100vw - 60px) !important;
 }
