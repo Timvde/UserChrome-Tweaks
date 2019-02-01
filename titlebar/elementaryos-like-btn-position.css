@@ -1,0 +1,38 @@
+/*
+ * Elementary OS like window buttons.
+ * Close (C) on the left, maximize (M) on the right
+ * no minimize (m)
+ *
+ * (ideal with title bar disabled)
+ *
+ * Contributor(s): Bleznudd
+ * https://github.com/Bleznudd/
+ *
+ */
+
+.toolbar-items{
+	position: absolute !important;
+	left: 34px !important;
+	width: calc(100vw - 100px) !important;
+}
+#TabsToolbar-customization-target{
+	width: 100% !important;
+	z-index: 10 !important;
+}
+.tabs-newtab-button{
+	z-index: 15 !important;
+}
+.tabbrowser-tab{
+	z-index: 15 !important;
+}
+.titlebar-buttonbox{
+	display: flex !important;
+	flex-direction: row-reverse !important;
+	z-index: 5 !important;
+}
+.titlebar-min{
+	display: none !important;
+}
+.titlebar-close{
+	margin-right: calc(100vw - 60px) !important;
+}
