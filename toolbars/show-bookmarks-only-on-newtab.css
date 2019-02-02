@@ -16,6 +16,7 @@
 #main-window[title^="New Tab"] #PersonalToolbar,
 #main-window[title^="Nightly"] #PersonalToolbar,
 #main-window[title^="Mozilla Firefox"] #PersonalToolbar,
-#main-window[title^="Firefox"] #PersonalToolbar {
+#main-window[title^="Firefox"] #PersonalToolbar,
+#main-window[title^="新标签页"] #PersonalToolbar {
   visibility: visible !important;
 }
