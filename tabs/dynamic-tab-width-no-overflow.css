@@ -13,8 +13,8 @@
 }
 
 .tabbrowser-tab:not([pinned]):hover{
-	transition: 250ms !important;
-    min-width: 80px !important;
+  transition: 250ms !important;
+  min-width: 80px !important;
 }
 	
 .tabbrowser-tab:not([pinned]) .tab-close-button {
