@@ -9,12 +9,9 @@
  * Contributor(s): Ivan0xFF
  */
 
-#TabsToolbar {
-  visibility: collapse !important;
-}
-
-#titlebar-buttonbox {
-  height: 40px !important;
+#TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
 }
 
 #nav-bar {
@@ -23,18 +20,18 @@
   box-shadow: none !important;
 }
 
-[uidensity="compact"]:root #titlebar-buttonbox {
-  height: 32px !important;
+#main-window[privatebrowsingmode="temporary"] #nav-bar {
+  margin-right: 180px;
 }
 
 [uidensity="compact"]:root #nav-bar {
   margin-top: -32px;
 }
 
-#titlebar-spacer {
-  background-color: var(--chrome-secondary-background-color);
+:not([uidensity="compact"]):root .titlebar-buttonbox-container {
+  height: 38px !important;
 }
 
-#titlebar-buttonbox-container {
-  background-color: var(--chrome-secondary-background-color);
+.titlebar-color {
+  background-color: var(--toolbar-bgcolor) !important;
 }
