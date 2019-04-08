@@ -9,21 +9,21 @@
  * Contributor(s): Ivan0xFF
  */
 
-#TabsToolbar {
+.tabbrowser-tab {
   visibility: collapse !important;
 }
 
-#titlebar-buttonbox {
+.titlebar-button {
   height: 40px !important;
 }
 
 #nav-bar {
-  margin-top: -40px;
+  margin-top: -42px;
   margin-right: 140px;
   box-shadow: none !important;
 }
 
-[uidensity="compact"]:root #titlebar-buttonbox {
+[uidensity="compact"]:root .titlebar-button {
   height: 32px !important;
 }
 
