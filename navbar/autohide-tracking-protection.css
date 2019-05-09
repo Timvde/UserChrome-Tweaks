@@ -1,13 +1,13 @@
 /*
  * Description: Hides the Tracking Protection icon.
  *
- * Contributor: Joachim Vandersmissen
+ * Contributor(s): Joachim Vandersmissen, Strappazzon
  */
 
-#tracking-protection-icon {
+#tracking-protection-icon-box {
   visibility: collapse !important;
 }
 
-#identity-box:hover > #tracking-protection-icon {
+#identity-box:hover > #tracking-protection-icon-box {
   visibility: visible !important;
 }
