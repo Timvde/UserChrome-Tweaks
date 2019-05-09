@@ -1,0 +1,11 @@
+/*
+ * Description: Hides the confirmation hint after bookmarking a web page
+ *
+ * Screenshot: https://i.fiery.me/IgZe.png
+ *
+ * Contributor(s): Strappazzon
+ */
+
+#confirmation-hint {
+  display: none !important
+}
