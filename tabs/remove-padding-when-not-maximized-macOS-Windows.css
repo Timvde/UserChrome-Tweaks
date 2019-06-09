@@ -16,7 +16,7 @@
  * or width: Xem !important;
  */
 
-.titlebar-placeholder[type="pre-tabs"] {
+.titlebar-spacer[type="pre-tabs"] {
   display:none !important;
 }
 
