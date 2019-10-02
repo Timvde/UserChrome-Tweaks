@@ -1,3 +1,14 @@
+/*
+ * Description: A dark right-click chrome-like context menu.
+ *
+ * Screenshot: https://imgur.com/neMpGJl
+ *
+ * Contributor(s): jy1263
+ */
+
+/* Please read the code style guidelines in CONTRIBUTING.md */
+
+/* Your code here */
 menupopup {
 	-moz-appearance: none !important;
 	padding: 8px 2px 8px 2px !important;
