@@ -1,0 +1,112 @@
+/*
+ * Description: A dark right-click chrome-like context menu.
+ *
+ * Screenshot: https://imgur.com/neMpGJl
+ *
+ * Contributor(s): jy1263
+ */
+
+/* Please read the code style guidelines in CONTRIBUTING.md */
+
+/* Your code here */
+menupopup {
+	-moz-appearance: none !important;
+	padding: 8px 2px 8px 2px !important;
+	background-color: #2B2B2B !important;
+	border: 1px #A0A0A0 solid !important;
+	min-width: 280px !important;
+}
+menuseparator {
+	-moz-appearance: none !important;
+	border: none !important;
+	padding: .5px 0px .5px 0px !important;
+	margin: 4px 8px 4px 8px !important;
+	background-color: #808080 !important;
+}
+menuitem, menu {
+	-moz-appearance: none !important;
+	color: white !important;
+	padding: 5px 0px 5px 0px !important;
+}
+menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
+	color: gray !important;
+}
+menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"]	 {
+	-moz-appearance: none !important;
+	padding: 5px 0px 5px 0px !important;
+	background-color: #414141 !important;
+}
+menugroup {
+	padding: 0px !important;
+	background-color: transparent !important;
+}
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+	color: white !important;
+}
+menuitem[type="checkbox"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="radio"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"] > .menu-iconic-text {
+	padding-left: 5px !important;
+}
+menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
+	padding: 7px 0px 0px 0px !important;
+	border: solid white;
+	border-width: 0 0 2px 2px;
+	transform: rotate(-45deg) scale(.75);
+	margin-bottom: 4px !important;
+}
+menuitem[checked="true"][type="radio"] > .menu-iconic-left {
+	padding: 1px !important;
+	border: solid white;
+	height: 17px !important;
+	border-radius: 100%;
+	background: white;
+	transform: scale(.5); 
+}
+menucaption {
+	background-color: transparent !important;
+	color: white !important;
+}
+#ContentSelectDropdown > menupopup {
+	background-image: none !important;
+}
+#ContentSelectDropdown {
+	padding: 0px !important;
+}
+menulist {
+	-moz-appearance: none !important;
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #666666 !important;
+	background-color: transparent !important;
+}
+menulist:hover {
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #999999 !important;
+	background-color: transparent !important;
+}
+menulist[open="true"]  {
+	border: 2px solid #666666 !important;
+	background-color: #333333 !important;
+}
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+	padding: 0px !important;
+}
+.menu-iconic-left {
+	-moz-appearance: none !important;
+	padding: 0px 5px 0px 9px !important;
+}
+tooltip {
+	-moz-appearance: none !important;
+	color: white !important;
+	background-color: #2B2B2B !important;
+	border: 1px solid #767676 !important;
+	padding: 6.5px !important;
+}
