@@ -1,9 +1,11 @@
 /*
  * Auto-hide the URL-bar show on hover or focus
  * as seen in https://www.reddit.com/r/FirefoxCSS/comments/boetx7/annoying_page_jump_with_address_bar_autohide/engne27/
+ * by https://www.reddit.com/user/SkyrimForTheDragons/
+ *
  * slightly modified for more responsiveness
  * 
- * note that this version DOES NOT hide the bookmarks toolbar
+ * Note that this version DOES NOT hide the bookmarks toolbar!
  */
 #nav-bar:not([customizing="true"]):not([inFullscreen]) {
 	min-height: 1px !important;
