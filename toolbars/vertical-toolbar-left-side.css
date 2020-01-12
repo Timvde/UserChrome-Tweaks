@@ -58,12 +58,13 @@
    * 0 is the top of firefox's interface 
    */
   top: var(--space-from-top-of-window)!important;
-  left:35px;
+  left:35px!important;
   height: 35px!important;
   width: 100%!important;
   /* turns the personnalToolbar on its side to a vertical orientation */
   transform-origin: top left!important;
   transform: rotate(90deg)!important;
+  display: block!important;
 }
 
 #personal-bookmarks {
