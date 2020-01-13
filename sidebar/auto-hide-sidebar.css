@@ -19,6 +19,7 @@
   min-width: var(--sidebar-hover-width) !important;
   max-width: var(--sidebar-hover-width) !important;
   border-right: 1px solid var(--sidebar-border-color);
+  z-index: 1;
 }
 
 #sidebar-box:hover {
