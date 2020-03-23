@@ -48,7 +48,7 @@
 
 #main-window[inFullscreen="true"] #browser,
 #main-window[inFullscreen="true"] #browser-bottombox {
-  margin-right: 0!important;
+  margin-left: 0!important;
 }
 
 #PersonalToolbar {
