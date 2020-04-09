@@ -1,0 +1,45 @@
+/*
+ * Reduces the padding/margins on the new (since Firefox 75) "breakout" navbar dropdown,
+ * so it looks less like a mobile layout
+ *
+ * Screenshot: https://github.com/Timvde/UserChrome-Tweaks/pull/170
+ *
+ * Contributor(s): udf
+ */
+
+/* Remove padding on urlbar results */
+.urlbarView-row {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Remove padding on urlbar (icons on the right break without this) */
+#urlbar-input-container {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* Reduce "breakout" navbar height */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: calc(var(--urlbar-toolbar-height) - 4px) !important;
+}
+
+/* Fix breakout positioning being too high after we decreased the height */
+#urlbar[breakout][breakout-extend] {
+  top: 2px !important;
+}
+
+/* Remove padding on search one offs div */
+.search-one-offs {
+  padding-block: 0px !important;
+}
+
+/* Fix padding left of the search one-off icons */
+.search-panel-one-offs {
+  padding-left: 7px !important;
+}
+
+/* Remove margins around the search one-off icons */
+.searchbar-engine-one-off-item {
+  margin: 0px !important;
+}
