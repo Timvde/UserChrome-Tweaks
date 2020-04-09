@@ -38,3 +38,7 @@
 #titlebar-buttonbox-container {
   background-color: var(--chrome-secondary-background-color);
 }
+
+.titlebar-color {
+  background-color: var(--toolbar-bgcolor);
+}
