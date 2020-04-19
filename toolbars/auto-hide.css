@@ -25,3 +25,8 @@
 	transition: all 50ms linear 0s !important;
 	z-index: 5 !important;
 }
+
+/* Needed for for FF 75 megabar */
+#urlbar {
+	--urlbar-toolbar-height: 32px !important;
+}
