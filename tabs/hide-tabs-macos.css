@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /*
- * This style will hide the tab bar. For MacOS
+ * This style will hide the tab bar. For MacOS Big Sur
  *
  * Contributor(s): Isaac-Newt, Ivan0xFF, millerdev, AMomchilov
  */
@@ -17,18 +17,30 @@
   display: block;
   position: absolute;
   visibility: visible;
+}
+
+/* Reposition the close/maximize/minimize buttons for the "normal" toolbar density  */
+/* When the UI density is set to "normal", the `uidensity` attribute is undefined.  */
+/* `window.document.documentElement.getAttribute("uidensity")` will be null.        */
+:root:not([uidensity]) #TabsToolbar .titlebar-buttonbox-container {
   margin-left: 12px;
   margin-top: 12px;
 }
 
+/* Reposition the close/maximize/minimize buttons for the "compact" toolbar density */
+:root[uidensity="compact"] #TabsToolbar .titlebar-buttonbox-container {
+  margin-left: 10px;
+  margin-top: 9px;
+}
+
 #TabsToolbar .titlebar-buttonbox.titlebar-color {
-	margin-left: 0px !important;
+  margin-left: 0px !important;
 }
 
 /*
  * Make room for window controls and a bit of extra space for window drag/move.
  * Only apply this style when not in fullscreen mode.
  */
-#main-window:not([inFullscreen]) #nav-bar{
+#main-window:not([inFullscreen]) #nav-bar {
   padding: 0px 0px 0px 70px !important;
 }
