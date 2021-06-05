@@ -1,0 +1,26 @@
+/*
+ * Description: All tabs visible, if too small, they expand on hover and shrink back when no hover.
+ *
+ * Screenshot:	https://imgur.com/ag4aAO0
+ *
+ * Contributor(s): ExXeptional, u/Azarihl, Madis0(used part of prevent-tab-overflow.css)
+ */
+
+.tabbrowser-tab {
+  transition: 1000ms !important;
+  min-width: 10px !important;
+  clip-width: 10px !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover{
+  transition: 250ms !important;
+  min-width: 80px !important;
+}
+	
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}
