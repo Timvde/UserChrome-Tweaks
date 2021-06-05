@@ -1,16 +1,19 @@
 /*
- * Moves the tab close button to the left of the tab
+ * Moves the tab close button to the left of the tab and hide icon
  *
- * Contributor(s): April93
+ * Contributor(s): millionart
  */
-#TabsToolbar .tab-close-button { 
-  -moz-box-ordinal-group: 0 !important; 
-  margin-left: -6px !important;
-  border-radius: 2px !important;
-  transition: opacity 200ms !important;
-}
-
-#TabsToolbar .tab-icon-image:not([pinned])
-{
-  margin-left: 2px;
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]) .tab-close-button {
+		-moz-box-ordinal-group: 0 !important;
+		-moz-margin-start: -2px !important;
+		-moz-margin-end: 4px !important;
+		border-radius: 50px !important;
+		display: none !important;
+	}
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):hover .tab-close-button {
+		display: -moz-box !important;
+	}
+	#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:not([pinned]):hover .tab-icon-image {
+		display: none !important;
+	}
 }
