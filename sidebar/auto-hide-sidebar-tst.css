@@ -1,0 +1,41 @@
+/*
+ * Description: A firefox userChrome.css modification to autohide sidebar when not in focus. It is based on the work of "TanzNukeTerror" and intended to be used with TreeStyleTabs.
+ *
+ * Screenshot: Original Theme - https://i.imgur.com/NKvSAYZ.jpg
+ *
+ * Contributor(s): img2tab, Chris Morgan, TanzNukeTerror, radamar
+ * 
+ */
+
+#sidebar {
+  max-width: none!important;
+  min-width: 0!important;
+}
+
+#sidebar-box+#sidebar-splitter {
+  display: none!important;
+}
+
+:root {
+  --thin-tab-width: 35px;
+  --wide-tab-width: 280px;
+}
+
+#sidebar-box {
+  overflow: hidden!important;
+  position: relative!important;
+  transition: all 100ms!important;
+  min-width: var(--thin-tab-width)!important;
+  max-width: var(--thin-tab-width)!important;
+}
+
+#sidebar-box #sidebar,#sidebar-box:hover {
+  transition: all 100ms!important;
+  min-width: var(--wide-tab-width)!important;
+  max-width: var(--wide-tab-width)!important;
+}
+
+/* For right sidebar change 'margin-right' to 'margin-left' */
+#sidebar-box:hover {
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width))*-1)!important;
+}
